@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+select {
+  text-align: center;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+input {
+  background-color: blue;
+  color: white;
+  border-radius: 30px;
+  height: 30px;
+}
+
+.form-group {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 400px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  border: 1px solid black;
+}
+

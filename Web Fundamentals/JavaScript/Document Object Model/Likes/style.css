@@ -1,0 +1,152 @@
+/* RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px dashed red;
+}
+/* RESETS */
+
+
+
+/* GLOBAL */
+body {
+    font-family: 'Roboto';
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+/* GLOBAL */
+
+
+
+/* NAVBAR */
+.nav-header {
+    width: 900px;
+    background-color: black;
+    color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.search {
+    width: 300px;
+}
+
+.btn1 {
+    background-color: aqua;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    width: 80px;
+    height: 20px;
+    box-shadow: 10px 5px 5px aqua;
+}
+/* NAVBAR */
+
+
+/* YOUR FEED */
+.your-feed {
+    margin-top: 10px;
+}
+/* YOUR FEED */
+
+
+/* MAIN BODY */
+.main {
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+}
+/* MAIN */
+
+
+
+/* CARD BODY 2 - 4 COL2*/
+.card2-4{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 610px;
+    height: 150px;
+    border: 2px solid black;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-body2-4 {
+    width: 610px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.body-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.body-info2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn {
+    background-color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    border: 1px solid black;
+    /* box-shadow: 10px 5px 5px black; */
+    width: 60px;
+    height: 30px;
+}
+/* CARD BODY 2 - 4 COL2*/
+
+
+
+/* CARD BODY 1 COL1*/
+
+/* CARD BODY */
+.card{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+}
+
+.user {
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.body-info {
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+/* CARD BODY */
+
+/* CARD BODY 1 COL1*/
+
+
+
+
+

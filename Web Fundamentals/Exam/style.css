@@ -1,0 +1,323 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px dashed red; */
+}
+
+/* styles to apply to body */
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: blue;
+}
+
+.flex-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.flex-container2 {
+    width: 1000px;
+    margin: 0 auto;
+    border-bottom: 5px solid black;
+}
+
+.flex-container3 {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.flex-container, .nav-links, .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container2, .nav-links2, .nav2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    height: 80px;
+    background-color: white;
+}
+
+.nav2 {
+    width: 1000px;
+    height: 80px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.nav-links {
+    width: 180px;
+    list-style-type: none;
+    align-items: center;
+}
+
+.nav-links2 {
+    width: 100%;
+    list-style-type: none;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links2 a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links2 a.active {
+    color: black;
+    font-weight: bold;
+}
+
+.nav-title {
+    color: black;
+}
+
+.search-container {
+    position: relative;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    width: 380px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid black;
+    color: #777;
+}
+
+.leaf {
+    background-color: aquamarine;
+}
+
+.search-dark {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.btn {
+    height: 30px;
+    width: 100px;
+    color: black;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background: var(--clr-primary);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.main2 {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.col-3 {
+    flex: 3;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 {
+    flex: 2;
+    margin-left: 30px;
+}
+
+.col-1 {
+    flex: 1;
+    
+}
+
+.card1 {
+    background-color: white;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body-info {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 70px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+}
+
+.card2 {
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 90px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    width: 40px;
+}
+
+.card3 {
+    background-color: #fff;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.card4 {
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 800px;
+}
+
+.card-body4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plants {
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.body-info2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plant-name1 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.plant-name2 {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.plant-name3 {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.plant-name4 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.plant-name5 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.plant-name6 {
+    margin-top: 10px;
+}
+
+.alert-message {
+    background-color: white;
+    width: 795px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-dark {
+    margin-left: 10px;
+}
+
+.btn2 {
+    height: 30px;
+    width: 100px;
+    background-color: aquamarine;
+    color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 5px black;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.card5 {
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+}
+
+
+

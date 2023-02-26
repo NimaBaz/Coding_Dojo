@@ -1,0 +1,80 @@
+.portfolio_img {
+    margin-right: auto;
+    margin-left: 0;
+    width: 10%;
+}
+
+.github {
+    margin-right: 5px;
+    margin-left: 0px;
+    width: 2.5%;
+}
+
+.linkedin {
+    margin-right: 5px;
+    margin-left: 0px;
+    width: 2%;
+}
+
+.email {
+    margin-right: 5px;
+    margin-left: 0px;
+    width: 2%;
+}
+
+.facebook {
+    margin-right: 5px;
+    margin-left: 0px;
+    width: 8%;
+}
+
+.list {
+    font-size: 12px;
+    height: 30px;
+    margin: 0px;
+    padding: 10px;
+}
+
+.list-item {
+    list-style-type: none;
+    margin-right: 10px;
+    margin-left: 0px;
+    display: inline;
+}
+
+.label {
+    margin-right: auto;
+    margin-left: -40px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+table {
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+form {
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 1px;
+    width: 245px;
+}
+

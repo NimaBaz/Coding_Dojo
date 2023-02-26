@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="nav">
+        <div class="nav-header">
+            <h1 class="nav-title">
+                Dojonary
+            </h1>
+            <input type="text" placeholder="Search" class="search">
+            <button onclick="changeText(this)" class="btn1">
+                Login
+            </button>
+        </div>
+    </div>
+    <!-- NAVBAR -->
+
+
+    <!-- Main Body -->
+    <div class="main">
+
+
+        <!-- CARD BODY 1 AND 2 -->
+        <div class="col-1">
+            <!-- CARD BODY 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <h1>Ninja</h1>
+                    <p>
+                        noun
+                    </p>
+                    <p>
+                        Plural: ninjas
+                    </p>
+                    <button onclick="liked(this)" class="btn">
+                        <span id="timesClicked">0</span>
+                        <span id="">Likes</span>
+                    </button>
+                </div>
+                <p class="body-info">
+                    A practitioner skilled in the <br>
+                    <a href="#">Japanese</a> art of <a href="#">ninjutsu</a>
+                </p>
+            </div>
+            <!-- CARD BODY 1 -->
+
+
+            <!-- CARD BODY 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <h1>Ninja</h1>
+                    <p>
+                        noun
+                    </p>
+                    <p>
+                        Plural: ninjas
+                    </p>
+                    <button onclick="liked2(this)" class="btn">
+                        <span id="timesClicked2">0</span>
+                        <span id="">Likes</span>
+                    </button>
+                </div>
+                <p class="body-info">
+                    A <a href="#">programmer</a> who breaks <br>
+                    down problems with <a href="#">zen</a>-like <br>
+                    focus
+                </p>
+            </div>
+        </div>
+        <!-- CARD BODY 2 -->
+        
+        <!-- CARD BODY 1 AND 2 -->
+        
+        
+        <!-- CARD BODY 3 -->
+        <div class="col-2">
+            <!-- CARD BODY 3 -->
+            <div class="card3">
+                <p class="body-info2">
+                    Dictionary is <br>
+                    defined by YOU
+                </p>
+                <button onclick="removeButton(this)" class="btn2">
+                    Add Definition
+                </button>
+            </div>
+            <!-- CARD BODY 3 -->
+        </div>
+        <!-- CARD BODY 3 -->
+        
+        
+    </div>
+
+    <!-- Main Body -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

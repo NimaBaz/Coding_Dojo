@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="nav">
+        <div class="flex-container">
+            <h1 class="nav-title">DojoWeather</h1>
+            <ul class="nav-links">
+                <li><a href="#" onclick="cityReport(this)">Burbank</a></li>
+                <li><a href="#" onclick="cityReport(this)">Chicago</a></li>
+                <li><a href="#" onclick="cityReport(this)">Dallas</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- navbar2 -->
+    <div class="nav2">
+        <div class="flex-container2">
+            <h1 class="nav-title2">San Jose</h1>
+            <ul class="nav-links2">
+                <li>
+                    <label for="temps">show temperature in</label>
+                    <select name="temps" id="temps" onchange="cToF('#cToF')">
+                        <option value="celsius">C</option>
+                        <option value="fahrenheit">F</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- main -->
+    <div class="main">
+
+        <!-- 2/3 width column -->
+        <div class="col-2">
+
+            <!-- weather cards -->
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-header">Today</h1>
+                    <img src="some_rain.png" alt="rain" class="weather-images">
+                    <div class="body-info">
+                        <p class="info">some rain</p>
+                    </div>
+                    <div class="body-info2">
+                        <span id="cToF" class="degrees">24</span>
+                        <span id="cToF" class="degrees2">18</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-header">Tomorrow</h1>
+                    <img src="some_sun.png" alt="sun" class="weather-images">
+                    <div class="body-info">
+                        <p class="info">some sun</p>
+                    </div>
+                    <div class="body-info2">
+                        <span id="cToF" class="degrees">27</span>
+                        <span id="cToF" class="degrees2">19</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-header">Friday</h1>
+                    <img src="some_clouds.png" alt="clouds" class="weather-images">
+                    <div class="body-info">
+                        <p class="info">some clouds</p>
+                    </div>
+                    <div class="body-info2">
+                        <span id="cToF" class="degrees">21</span>
+                        <span id="cToF" class="degrees2">16</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-header">Saturday</h1>
+                    <img src="some_sun.png" alt="sun" class="weather-images">
+                    <div class="body-info">
+                        <p class="info">some sun</p>
+                    </div>
+                    <div class="body-info2">
+                        <span id="cToF" class="degrees">26</span>
+                        <span id="cToF" class="degrees2">21</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- main2 -->
+    <div class="main2">
+        
+        <!-- Cookies card -->
+        <div class="alert" id="clear-message">
+            <img src="cookie.png" alt="cookie" class="cookies">
+            <p class="alert-message">
+                Stop! Cookie time <br>
+                We use cookies (sadly not the edible ones) to personalize <br>
+                content and ads, to provide social media feature and to <br>
+                analyse our traffic. <a href="#">Read more...</a>
+            </p>
+            <button class="btn" onclick="removeAlert('#clear-message')">I Accept</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

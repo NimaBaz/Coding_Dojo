@@ -1,0 +1,43 @@
+/* RESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px dashed red; */
+}
+
+/* RESETS */
+
+
+body {
+    background-color: lightblue;
+}
+
+.main {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row-1 {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.square {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,193 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px dashed red; */
+}
+
+/* styles to apply to body */
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #3a81e6;
+}
+
+/* styles to apply to navbar */
+
+.flex-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.flex-container, .nav-links, .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    height: 80px;
+    background-color: skyblue;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    margin-right: 10px;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.nav-links a {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.flex-container2 {
+    width: 1000px;
+    margin: 0 auto;
+    border-bottom: 4px solid black;
+}
+
+.flex-container2, .nav-links2, .nav2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav2 {
+    height: 80px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.nav-links2 {
+    margin-right: 10px;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.nav-title2 {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+/* styles to apply to the main */
+
+.main {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.main2 {
+    display: flex;
+    margin: 0 auto;
+    width: 700px;
+}
+
+.col-2 {
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    height: 350px;
+    width: 233px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body {
+    background-color: #d9d9d9; 
+    width: 245px;
+    height: 350px;
+}
+
+.weather-images {
+    border-radius: 50%;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.body-info2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.degrees {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.degrees2 {
+    color: blue;
+    font-size: 26px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+/* styles to apply to alert box */
+
+.alert {
+    width: 700px;
+    height: 100px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cookies {
+    margin-left: 10px;
+}
+
+.alert-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.alert-message {
+    font-weight: bold;
+}
+
+.btn {
+    height: 30px;
+    width: 100px;
+    color: black;
+    background-color: skyblue;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 5px black;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    margin-right: 20px;
+}
+

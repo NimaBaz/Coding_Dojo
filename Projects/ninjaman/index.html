@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NinjaMan</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.row {
+			line-height: 0;
+		}
+		.wall {
+			background-color: blue;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+		}
+		.sushi {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url('sushi.png');
+			background-size: contain;
+		}
+		.blank {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+		}
+		.onigiri {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url('onigiri.png');
+			background-size: contain;
+		}
+		#ninjaman {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url('ninja.gif');
+			background-size: contain;
+			position: absolute;
+			left: 60px;
+			top: 60px;
+		}
+		#bluey {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url('bluey.gif');
+			background-size: contain;
+			position: absolute;
+		}
+		#pinky {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url('pinky.gif');
+			background-size: contain;
+			position: absolute;
+		}
+		#pumpky {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url('pumpky.gif');
+			background-size: contain;
+			position: absolute;
+		}
+		#red {
+			background-color: black;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url('red.gif');
+			background-size: contain;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id='world'></div>
+	<div id='ninjaman'></div>
+	Score: <span id='score'>0</span>
+</body>
+<script type="text/javascript">
+	var world = [
+		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  		[1, 0, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 1],
+  		[1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1],
+  		[1, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 1],
+  		[1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1],
+  		[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  		[1, 1, 1, 2, 1, 2, 1, 1, 1, 0, 0, 1, 1, 1, 2, 1, 2, 1, 1, 1],
+  		[1, 3, 3, 2, 1, 2, 1, 1, 0, 0, 0, 0, 1, 1, 2, 1, 2, 3, 3, 1],
+  		[1, 1, 1, 2, 1, 3, 1, 1, 0, 0, 0, 0, 1, 1, 3, 1, 2, 1, 1, 1],
+  		[1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1],
+  		[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  		[1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
+  		[1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  		[1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1],
+  		[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  		[1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1],
+  		[1, 2, 1, 2, 3, 2, 2, 1, 2, 3, 3, 2, 1, 2, 2, 3, 2, 1, 2, 1],
+  		[1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1],
+  		[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+
+  	];
+
+	var worldDict = {
+		0: 'blank',
+		1: 'wall',
+		2: 'sushi',
+		3: 'onigiri',
+		4: 'bluey',
+		5: 'pinky',
+		6: 'pumpky',
+		7: 'red',
+	}
+
+	var ninjaScore = 0;
+	var ninjaScore2 = 0;
+	var sushiVal = 10;
+	var onigiriVal = 5;
+
+	// drawing the ninjaman world 
+	function drawWorld() {
+		output = "";
+
+		for (var row = 0; row < world.length; row++) {
+			output += "<div class = 'row'>";
+			for (var x = 0; x < world[row].length; x++) {
+				output += "<div class = '" + worldDict[world[row][x]] + "'></div>";
+			}
+			output += "</div>";
+		}
+		document.getElementById('world').innerHTML = output;
+		document.getElementById('score').innerHTML = ninjaScore;
+	}
+	drawWorld();
+
+	var ninjaman = {
+		x: 1,
+		y: 1
+	}
+
+	// making ninjaman move
+	// keep score of how mant sushi's ninjaman eats 
+    // sushi = 10pts onigiri = 5pts
+	function drawNinjaman() {
+		document.getElementById('ninjaman').style.top = ninjaman.y * 60 + 'px';
+		document.getElementById('ninjaman').style.left = ninjaman.x * 60 + 'px';
+	}
+	drawNinjaman();
+
+	document.onkeydown = function(e){
+    		console.log(e);
+    		if(e.keyCode == 37) { // LEFT
+    			if (world[ninjaman.y][ninjaman.x - 1] != 1) {
+    				ninjaman.x--;
+    				if (world[ninjaman.y][ninjaman.x] == 2) {
+    					ninjaScore += sushiVal;
+    				}
+    			}
+    		}
+            else if (e.keyCode == 38) { // UP
+            	if (world[ninjaman.y - 1][ninjaman.x] != 1) {
+    				ninjaman.y--;
+    				if (world[ninjaman.y][ninjaman.x] == 2) {
+    					ninjaScore += sushiVal;
+    				}
+    			} 
+            }
+    		else if (e.keyCode == 39) { // RIGHT
+    			if (world[ninjaman.y][ninjaman.x + 1] != 1) {
+    				ninjaman.x++;
+    				if (world[ninjaman.y][ninjaman.x] == 2) {
+    					ninjaScore += sushiVal;
+    				}
+    			}  		
+    		}
+    		else if (e.keyCode == 40) { // DOWN
+    			if (world[ninjaman.y + 1][ninjaman.x] != 1) {
+    				ninjaman.y++;
+    				if (world[ninjaman.y][ninjaman.x] == 2) {
+    					ninjaScore += sushiVal;
+    				}
+    			}
+    		}
+    		world[ninjaman.y][ninjaman.x] = 0;
+    		drawNinjaman();
+    		drawWorld();
+    }
+
+    // hacker challenges - random world
+
+    // hacker challenges = create ghosts that chase ninjaman
+
+    // give ninjaman 3 lives where Game Over occurs when a ghost hits ninjaman 3 time
+
+</script>
+</html>

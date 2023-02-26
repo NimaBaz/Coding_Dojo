@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="nav">
+        <div class="nav-header">
+            <h1 class="nav-title">
+                Network
+            </h1>
+        </div>
+    </div>
+    <!-- NAVBAR -->
+
+    <div class="your-feed">
+        <h1 class="your-feed">Your Feed</h1>
+    </div>
+
+    <!-- Main Body -->
+    <div class="main">
+
+        <!-- CARD BODY 1 COL-1-->
+        <div class="col-1">
+
+            <!-- CARD BODY 1 -->
+            <div class="card">
+                <p class="body-info">
+                    <img src="Palpatine.png" alt="palpatine" class="user"> <br><br>
+                    <a href="#">Add an avatar</a> <br><br>
+                    Nima Bazofti
+                </p>
+            </div>
+            <!-- CARD BODY 1 -->
+        
+        </div>
+        <!-- CARD BODY 1 COL-1-->
+        
+        
+        <!-- CARD BODY 2 - 4 COL-2 -->
+        <div class="col-2">
+
+            <!-- CARD BODY 2 -->
+            <div class="card2-4">
+                <div class="card-body2-4">
+                    <h1>Neil M</h1>
+                    <div class="body-elements">
+                        <p>
+                            <span id="timesClicked">0</span>
+                            like(s)
+                        </p>
+                        <button onclick="liked('#timesClicked')" class="btn">
+                            Like
+                        </button>
+                    </div>
+                </div>
+                <p class="body-info2">
+                    I just set up this new discord bot, let me <br>
+                    know what you all think. <a href="#">link</a>
+                </p>
+            </div>
+            <!-- CARD BODY 2 -->
+
+            <!-- CARD BODY 3 -->
+            <div class="card2-4">
+                <div class="card-body2-4">
+                    <h1>Nicole K</h1>
+                    <div class="body-elements">
+                        <p>
+                            <span id="timesClicked2">0</span>
+                            like(s)
+                        </p>
+                        <button onclick="liked('#timesClicked2')" class="btn">
+                            Like
+                        </button>
+                    </div>
+                </div>
+                <p class="body-info2">
+                    Just finished my <a href="#">next comic</a>, check it out.
+                </p>
+            </div>
+            <!-- CARD BODY 3 -->
+
+
+            <!-- CARD BODY 4 -->
+            <div class="card2-4">
+                <div class="card-body2-4">
+                    <h1>Jim R</h1>
+                    <div class="body-elements">
+                        <p>
+                            <span id="timesClicked3">0</span>
+                            like(s)
+                        </p>
+                        <button onclick="liked('#timesClicked3')" class="btn">
+                            Like
+                        </button>
+                    </div>
+                </div>
+                <p class="body-info2">
+                    I can't stop listening to the <a href="#">new album</a>. <br>
+                    Who else is liking it?
+                </p>
+            </div>
+            <!-- CARD BODY 4 -->
+            
+        </div>
+        <!-- CARD BODY 2 - 4 COL-2 -->
+        
+    </div>
+    <!-- Main Body -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

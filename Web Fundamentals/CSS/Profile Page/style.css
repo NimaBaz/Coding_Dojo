@@ -1,0 +1,342 @@
+/* RESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px dashed red; */
+}
+
+/* RESETS */
+
+
+
+
+/* GLOBAL */
+
+body {
+    font-family: 'Roboto';
+}
+
+p {
+    color: red;
+}
+
+/* GLOBAL */
+
+
+
+
+/* NAVBAR */
+
+.nav {
+    background-color: black;
+    height: 50px;
+    width: 1920px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-header {
+    width: inherit;
+    color: red;
+    margin-left: 300px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-text {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    padding: 10px;
+}
+
+.nav-header a:hover {
+    color: red;
+}
+
+.nav-header:hover {
+    background: var(--clr-primary-hover);
+}
+
+.button a:hover {
+    color: black;
+}
+
+.button:hover {
+    background: var(--clr-primary-hover);
+}
+
+.button {
+    margin-right: 665px;
+}
+
+.button a:hover {
+    color: black;
+}
+
+.button:hover {
+    background: var(--clr-primary-hover);
+}
+
+.btn-edit {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.btn {
+    background-color: red;
+    width: 80px;
+    height: 20px;
+    box-shadow: 10px 5px 5px red;
+}
+
+/* NAVBAR */
+
+
+
+
+/* MAIN BODY */
+
+.main {
+    display: flex;
+}
+
+/* MAIN */
+
+
+
+
+/* CARD BODY 1 COL1*/
+
+.card{
+    margin-left: 300px;
+    margin-top: 30px;
+    width: 610px;
+    height: 330px;
+    border: 2px solid grey;
+    background-color: black;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.main-header {
+    background-color: red;
+    width: inherit;
+    height: 80px;
+}
+
+.user {
+    width: 15%;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 25px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.name {
+    padding: 8px;
+    margin-top: 25px;
+    color: white;
+}
+
+.map {
+    width: 8%;
+    background-color: red;
+}
+
+.location {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+}
+
+.cog {
+    width: 3%;
+}
+
+.edit-profile{
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+    color: red;
+}
+
+/* CARD BODY 1 COL1*/
+
+
+
+
+/* CARD BODY 2-4 HEADERS */
+
+.header {
+    background-color: red;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* CARD BODY 2-4 HEADERS */
+
+
+
+
+/* CARD BODY 2 COL1*/
+
+.card2{
+    margin-left: 300px;
+    margin-top: 30px;
+    width: 610px;
+    height: 200px;
+    border: 2px solid grey;
+    background-color: black;
+}
+
+.title {
+    font-size: 16px;
+    color: black;
+    padding: 15px;
+    gap: 10px;
+}
+
+.info2 {
+    font-weight: bold;
+    font-size: 26px;
+    padding: 20px;
+    gap: 10px;
+    color: white;
+}
+
+/* CARD BODY 2 COL1*/
+
+
+
+
+/* CARD BODY 3-4 PROFILE PICTURES AND NAMES */
+
+.people {
+    width: 20%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.connections {
+    font-size: 16px;
+    gap: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* CARD BODY 3-4 PROFILE PICTURES AND NAMES */
+
+
+
+
+/* CARD BODY 3 COL2*/
+
+.card3{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 310px;
+    height: 230px;
+    border: 2px solid grey;
+    background-color: black;
+}
+
+.card3-body {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle {
+    font-size: 20px;
+    background-color: silver;
+    color: black;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 0 5px;
+    margin-left: 10px;
+}
+
+.icons {
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.add-remove {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.add {
+    border-radius: 50%;
+    background-color: red;
+}
+
+.remove {
+    border-radius: 50%;
+    background-color: red;
+}
+
+/* CARD BODY 3 COL2*/
+
+
+
+
+/* CARD BODY 4 COL2*/
+
+.card4{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 310px;
+    height: 410px;
+    border: 2px solid grey;
+    background-color: black;
+}
+
+.card4-body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.circle2 {
+    font-size: 20px;
+    background-color: silver;
+    color: black;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+.view {
+    color: red;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 2px solid gray;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* CARD BODY 4 COL2*/
+

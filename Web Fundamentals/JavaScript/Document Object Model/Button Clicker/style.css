@@ -1,0 +1,141 @@
+/* RESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px dashed red;
+}
+
+/* RESETS */
+
+
+
+/* GLOBAL */
+
+body {
+    font-family: 'Roboto';
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* GLOBAL */
+
+
+
+/* NAVBAR */
+
+.nav-header {
+    width: 900px;
+    background-color: black;
+    color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.search {
+    width: 300px;
+}
+
+.btn1 {
+    background-color: aqua;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    width: 80px;
+    height: 20px;
+    box-shadow: 10px 5px 5px aqua;
+}
+
+/* NAVBAR */
+
+
+
+/* MAIN BODY */
+
+.main {
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+}
+
+/* MAIN */
+
+
+
+/* CARD BODY 1 and 2 COL1*/
+
+.card{
+    margin-top: 30px;
+    width: 610px;
+    height: 200px;
+    border: 2px solid grey;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.body-info {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.btn {
+    background-color: yellow;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    box-shadow: 10px 5px 5px black;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+/* CARD BODY 1 and 2 COL1*/
+
+
+
+/* CARD BODY 3 COL2*/
+
+.card3{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 250px;
+    height: 200px;
+    border: 2px solid grey;
+    background-color: white;
+}
+
+.body-info2 {
+    font-weight: bold;
+    font-size: 26px;
+    color: black;
+}
+
+.btn2 {
+    background-color: green;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    width: 150px;
+    height: 40px;
+    margin-left: 45px;
+    margin-top: 20px;
+    box-shadow: 10px 5px 5px black;
+}
+
+/* CARD BODY 3 COL2*/
+
+
+
+
+

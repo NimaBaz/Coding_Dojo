@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* ADD A SANS SERIF DEFAULT FONT HERE */
+}
+
+body {
+    /* CHANGE THE BACKGROUND COLOR TO WHEAT */
+    background-color: wheat;
+}
+
+p,
+img {
+    margin-bottom: 20px;
+}
+
+#container {
+    width: 1200px;
+    margin: 0 auto;
+    height: 1000px;
+    background-color: white;
+    /* CHANGE THE BACKGROUND COLOR TO WHITE
+    AND ADD A LIGHT GREY BORDER ON THE LEFT AND RIGHT */
+}
+
+#header {
+    padding: 20px;
+    background-color: #79b5f1;
+    color: white;
+    /* CHANGE THE TEXT COLOR TO WHITE AND
+    THE BACKGROUND COLOR SHOULD BE #79b5f1 */
+}
+
+/*
+ASIDE AND MAIN MUST BE SIDE BY SIDE
+ADD THE CORRECT PROPERTIES TO THEIR RULE SETS
+*/
+
+aside {
+    width: 200px;
+    padding: 20px;
+}
+
+main {
+    width: 900px;
+    padding: 20px;
+    position: absolute;
+    right: 80px;
+    top: 100px;
+}
+
+#nav {
+    /* REMOVE THE BULLET POINTS */
+    list-style-type: none;
+}
+
+#nav a {
+    /* REMOVE THE UNDERLINES */
+    text-decoration: none;
+}
+
+.intro {
+    width: 620px;
+}
+
+.story {
+    width: 620px;
+}
+

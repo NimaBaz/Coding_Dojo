@@ -1,0 +1,1 @@
+powershell -command "& {Set-ExecutionPolicy -executionpolicy Unrestricted; get-childitem -Recurse -Filter 'node_module' | remove-item  -Force -recurse;}"

@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-outline-dark {
+  margin-top: 10px;
+}
+
+.btn-outline-danger {
+  margin-left: 10px;
+}
+
+button {
+  margin-right: 5px;
+}
+
+.form-container {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.user-list {
+  margin-bottom: 50px;
+}
+
+.line-through {
+  text-decoration: line-through;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.list {
+  margin-top: 20px;
+}

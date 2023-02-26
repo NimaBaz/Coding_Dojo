@@ -1,0 +1,20 @@
+h1 {
+    color: aqua;
+    background-color: black;
+    text-align: left;
+}
+
+h2 {
+    color: white;
+    background-color: rebeccapurple;
+    text-align: center;
+}
+
+h3 {
+    background-color: skyblue;
+    text-align: right;
+}
+
+h3 a {
+    color: blue;
+}

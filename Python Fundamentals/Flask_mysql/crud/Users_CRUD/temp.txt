@@ -1,0 +1,68 @@
+<!-- <form action='/results' method='post'>
+        <div>
+
+            <div>
+                <label for='first_name'>First Name:</label>
+                <input type='text' name='first_name'>
+            </div>
+
+            <div>
+                <label for='last_name'>Last Name:</label>
+                <input type='text' name='last_name'>
+            </div>
+
+            <div>
+                <label for='email'>Email:</label>
+                <input type='text' name='email'>
+            </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" value='create user'>
+                Create
+            </button>
+        </div>
+    </form> -->
+
+# Server.py starts here
+
+    # ! READ ONE
+# @app.route("/create/<int:id>")
+# def get_user(id):
+#     return render_template("results.html", user = User.get_one({'id': id}))
+
+# ! UPDATE
+# @app.route("/update/<int:id>")
+# def edit(id):
+#     return render_template("edit.html", users = User.get_one({'id': id}))
+
+# @app.route("/update", methods = ["POST"])
+# def update():
+#     User.update(request.form)
+#     return render_template("/")
+
+# ! DELETE
+
+# user.py starts here
+
+# ! READ ONE
+    @classmethod
+    def get_one(cls, data):
+        query = "SELECT * FROM users WHERE id = %(id)s;"
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        pprint(result[0])
+        user = User(result[0])
+        print(user)
+        return user
+
+    # ! UPDATE
+    @classmethod
+    def update(cls, data):
+        query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s' WHERE id = %(id)s;"
+        return connectToMySQL(DATABASE).query_db(query, data)
+
+    # ! DELETE
+
+
+
+
+

@@ -1,0 +1,33 @@
+.search {
+    background-color: white;
+    color: aquamarine;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 30px;
+    width: 150px;
+    border: 2px solid aquamarine;
+    border-radius: 20px;
+}
+
+.plus {
+    background-color: aquamarine;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    margin: 30px;
+    width: 55px;
+    border: 2px solid aquamarine;
+    border-radius: 50px;
+}
+
+.create {
+    background-color: blue;
+    color: white;
+    font-size: large;
+    padding: 10px;
+    margin: 30px;
+    width: 200px;
+    box-shadow: 10px 5px 5px black;
+}
+
