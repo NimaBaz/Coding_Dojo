@@ -40,22 +40,27 @@ const expected5 = false;
  */
 function canBuildS1FromS2(neededChars, availableChars) {
 
+    // Check to see if there are enough chars to do the check
     if (availableChars.length < neededChars.length ) {
         return false
     }
 
     const obj = {};
 
-    for (let i = 0; i < availableChars.length; i += 1) {
+    // Create obj to store the frequency of characters in str2
+    for (let i = 0; i < availableChars.length; i++) {
         char = availableChars.charAt(i).toLowerCase();
         obj[char] = (obj[char] || 0) + 1;
     }
-    for (let i = 0, availableChars = neededChars.length; i < availableChars; i += 1) {
-        char = neededChars.charAt(i).toLowerCase();
+    // Check to see if str1 can be built from the chars in str2
+    for (let j = 0, availableChars = neededChars.length; j < availableChars; j++) {
+        char = neededChars.charAt(j).toLowerCase();
         if (!obj[char]) {
             return false
         }
-        obj[char] -= 1;
+        else {
+            obj[char] -= 1;
+        }
     }
     return true
 }
