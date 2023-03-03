@@ -42,10 +42,22 @@ const expected3 = [-1, -1]; // not found.
  *    pair is found.
  */
 function musicRuntime(busDuration, songDurations) {
-    
+    const obj = {};
+    const target = busDuration - 30;
+
+    for (let i = 0; i < songDurations.length; i++) {
+        const compliment = target - songDurations[i];
+
+        if (obj[compliment]) {
+            return [obj[compliment], i]
+        }
+        else {
+            obj[songDurations[i]] = i;
+        }
+    }
+    return [-1, -1]
 }
 
-/*****************************************************************************/
-
-
-module.exports = {musicRuntime,musicRuntime2,musicRuntime3};
+console.log(musicRuntime(busDuration1, songDurations1))
+console.log(musicRuntime(busDuration2, songDurations2))
+console.log(musicRuntime(busDuration3, songDurations3))

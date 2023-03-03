@@ -50,8 +50,21 @@ const expected3 = [];
  * @returns {Array<Person>} The people that have the given bad habit.
  */
 function santasNaughtyList(persons, badHabit) {
-    //Code goes here
+    const newArray = [];
+
+    for (let i = 0; i < persons.length; i++) {
+        for (let j = 0; j < persons[i].habits.length; j++) {
+            if (persons[i].habits[j] === badHabit) {
+                newArray.push(`${persons[i].firstName} ${persons[i].lastName}`);
+            }
+        }
+    }
+    return newArray
 }
+
+console.log(santasNaughtyList(students, badHabit1))
+console.log(santasNaughtyList(students, badHabit2))
+console.log(santasNaughtyList(students, badHabit3))
 
 /**
  * Finds a list of people whose habits contain the given bad habit. 
@@ -66,10 +79,11 @@ function santasNaughtyList(persons, badHabit) {
  * @returns {Array<Person>} The people that have the given bad habit.
  */
 function santasNaughtyListFunctional(persons, badHabit) {
-    
+    return persons.filter(elem => elem.habits.includes(badHabit)).map(elem => `${elem.firstName} ${elem.lastName}`)
 }
 
+console.log(santasNaughtyListFunctional(students, badHabit1))
+console.log(santasNaughtyListFunctional(students, badHabit2))
+console.log(santasNaughtyListFunctional(students, badHabit3))
+
 /*****************************************************************************/
-
-
-module.exports = {santasNaughtyList,functionalSantasNaughtyList};
