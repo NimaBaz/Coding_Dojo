@@ -42,33 +42,33 @@ const expected3 = [-1, -1]; // not found.
  *    pair is found.
  */
 function musicRuntime(busDuration, songDurations) {
-    const obj = {};
+    const songDurationToIndexTable = {};
     const target = busDuration - 30;
     let longestPair = [-1, 1];
 
     for (let i = 0; i < songDurations.length; i++) {
         const compliment = target - songDurations[i];
 
-        // if (obj.hasOwnProperty(compliment)) {}
-        if (compliment in obj) {
+        // if (songDurationToIndexTable.hasOwnProperty(compliment)) {}
+        if (compliment in songDurationToIndexTable) {
             // check if longest pair contains a maximun song
             if (longestPair[0] === -1) {
-                longestPair = [obj[compliment], i];
+                longestPair = [songDurationToIndexTable[compliment], i];
             }
             else {
                 const oldSongA = songDurations[longestPair[0]];
                 const oldSongB = songDurations[longestPair[1]];
-                const newSongA = songDurations[obj[compliment]];
+                const newSongA = songDurations[songDurationToIndexTable[compliment]];
                 const newSongB = songDurations[i];
                 const maxSong = Math.max(oldSongA, oldSongB, newSongA, newSongB);
 
                 if (maxSong === newSongA || maxSong === newSongB) {
-                    longestPair = [obj[compliment], i]
+                    longestPair = [songDurationToIndexTable[compliment], i]
                 }
             }
         }
         else {
-            obj[songDurations[i]] = i;
+            songDurationToIndexTable[songDurations[i]] = i;
         }
     }
     return longestPair
