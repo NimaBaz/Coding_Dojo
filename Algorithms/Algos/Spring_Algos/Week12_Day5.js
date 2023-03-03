@@ -44,18 +44,34 @@ const expected3 = [-1, -1]; // not found.
 function musicRuntime(busDuration, songDurations) {
     const obj = {};
     const target = busDuration - 30;
+    let longestPair = [-1, 1];
 
     for (let i = 0; i < songDurations.length; i++) {
         const compliment = target - songDurations[i];
 
-        if (obj[compliment]) {
-            return [obj[compliment], i]
+        // if (obj.hasOwnProperty(compliment)) {}
+        if (compliment in obj) {
+            // check if longest pair contains a maximun song
+            if (longestPair[0] === -1) {
+                longestPair = [obj[compliment], i];
+            }
+            else {
+                const oldSongA = songDurations[longestPair[0]];
+                const oldSongB = songDurations[longestPair[1]];
+                const newSongA = songDurations[obj[compliment]];
+                const newSongB = songDurations[i];
+                const maxSong = Math.max(oldSongA, oldSongB, newSongA, newSongB);
+
+                if (maxSong === newSongA || maxSong === newSongB) {
+                    longestPair = [obj[compliment], i]
+                }
+            }
         }
         else {
             obj[songDurations[i]] = i;
         }
     }
-    return [-1, -1]
+    return longestPair
 }
 
 console.log(musicRuntime(busDuration1, songDurations1))
