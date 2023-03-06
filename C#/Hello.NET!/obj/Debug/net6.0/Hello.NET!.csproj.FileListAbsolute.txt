@@ -1,0 +1,15 @@
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.csproj.AssemblyReference.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.AssemblyInfoInputs.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.AssemblyInfo.cs
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.csproj.CoreCompileInputs.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\bin\Debug\net6.0\Hello.NET!.exe
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\bin\Debug\net6.0\Hello.NET!.deps.json
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\bin\Debug\net6.0\Hello.NET!.runtimeconfig.json
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\bin\Debug\net6.0\Hello.NET!.dll
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\bin\Debug\net6.0\Hello.NET!.pdb
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.dll
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\refint\Hello.NET!.dll
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.pdb
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\Hello.NET!.genruntimeconfig.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Hello.NET!\obj\Debug\net6.0\ref\Hello.NET!.dll
