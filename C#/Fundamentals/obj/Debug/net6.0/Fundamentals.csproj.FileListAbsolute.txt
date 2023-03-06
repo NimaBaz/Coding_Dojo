@@ -1,0 +1,15 @@
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\bin\Debug\net6.0\Fundamentals.exe
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\bin\Debug\net6.0\Fundamentals.deps.json
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\bin\Debug\net6.0\Fundamentals.runtimeconfig.json
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\bin\Debug\net6.0\Fundamentals.dll
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\bin\Debug\net6.0\Fundamentals.pdb
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.csproj.AssemblyReference.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.AssemblyInfoInputs.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.AssemblyInfo.cs
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.csproj.CoreCompileInputs.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.dll
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\refint\Fundamentals.dll
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.pdb
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\Fundamentals.genruntimeconfig.cache
+C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\Fundamentals\obj\Debug\net6.0\ref\Fundamentals.dll

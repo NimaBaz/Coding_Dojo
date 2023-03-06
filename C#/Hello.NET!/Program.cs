@@ -1,23 +1,15 @@
-﻿// using System;
+﻿// System.Console.WriteLine(("Hello World!"));
 
-// namespace FirstCSharp {
-//     class Hello {
-//         static void Main(string [] args) {
-//             console.WriteLine("Hello World!");
-//         }
-//     }
+// string name = "Nima";
+// int favNum1 = 10;
+// int favNum2 = 9;
+
+// static int multi(int num1, int num2) {
+//     int sum = num1 * num2;
+//     return sum;
 // }
 
-string name = "Nima";
-int favNum1 = 10;
-int favNum2 = 9;
-
-static void multi(int num1, int num2) {
-    int sum = num1 * num2;
-    return sum;
-}
-
-System.Console.WriteLine(multi(favNum1, favNum2));
+// System.Console.WriteLine(multi(favNum1, favNum2));
 
 // static void PrintDivisibleNumbers() {
 //     for (int i = 0; i < 100; i++) {
