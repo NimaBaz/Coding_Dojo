@@ -137,13 +137,13 @@ class ListNode {
 */
     const emptyList = new SinglyLinkedList();
 
-  // const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-  // const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
-  // const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
-  // const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
-  // const unorderedList = new SinglyLinkedList().insertAtBackMany([
-  //     -5, -10, 4, -3, 6, 1, -7, -2,
-  //   ]);
+    const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
+    const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
+    const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
+    const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
+    const unorderedList = new SinglyLinkedList().insertAtBackMany([
+        -5, -10, 4, -3, 6, 1, -7, -2,
+    ]);
     // console.log(unorderedList.printList())
 
   /* node 4 connects to node 1, back to head */
@@ -159,4 +159,8 @@ class ListNode {
   // ]);
 
   // Print your list like so:
-  // console.log(firstThreeList.toArr());
+    console.log(singleNodeList.toArr());
+    console.log(biNodeList.toArr());
+    console.log(firstThreeList.toArr());
+    console.log(secondThreeList.toArr());
+    console.log(unorderedList.toArr());
