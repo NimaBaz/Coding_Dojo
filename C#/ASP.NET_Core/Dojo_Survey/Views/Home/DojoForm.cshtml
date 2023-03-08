@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <h1>User Form</h1>
+
+    <form class="form-group" action="/process" method="post">
+        <label for="NameField">Name:</label>
+        <input class="form-control" type="text" name="NameField"/>
+
+        <label for="DojoField">Dojo Location:</label>
+        <select name="DojoField">
+            <option value="" disabled selected hidden></option>
+            <option value="San Jose">San Jose</option>
+            <option value="Washington">Washington</option>
+            <option value="Chicago">Chicago</option>
+            <option value="New York">New York</option>
+        </select>
+
+        <label for="LanguageField">Favorite Language:</label>
+        <select name="LanguageField">
+            <option disabled selected hidden></option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+
+        <label for="MessageField">Comment:</label>
+        <input class="form-control" type="text" name="MessageField"/>
+
+        <input class="btn" type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

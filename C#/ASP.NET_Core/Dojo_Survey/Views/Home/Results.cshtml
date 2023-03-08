@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Results</title>
+</head>
+<body>
+
+    <h1>Submitted Info</h1>
+    
+    <p>Name: @ViewBag.name</p>
+    <p>Dojo: @ViewBag.dojo</p>
+    <p>Favorite Language: @ViewBag.language</p>
+
+    @{
+        if (ViewBag.message == null) {
+            <p>
+                Comment: <span class="no-message">No Comment</span>
+            </p>
+        }
+        else {
+            <p>Comment: @ViewBag.message</p>
+        }
+    }
+
+    <a class="btn" href="/users/form">Go Back</a>
+</body>
+</html>

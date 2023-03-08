@@ -1,0 +1,14 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# folders
+# /.vscode
+# /bin
+# /obj
+# /Properties
+
+# misc
+# appsettings.Development.json
+# appsettings.json
+# Dojo_Survey.csproj
+
+
