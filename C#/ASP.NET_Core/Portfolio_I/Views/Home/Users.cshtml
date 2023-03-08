@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>User</title>
+</head>
+<body>
+
+    <h1>These are my Users</h1>
+
+    <div>
+        <a class="btn" href="/">Home</a>
+        <a class="btn" href="/contacts">Contact</a>
+    </div>
+
+    <h2>Users</h2>
+
+    @foreach (string userId in ViewBag.UserIds) {
+        <p>@userId</p>
+    }
+
+</body>
+</html>
+
