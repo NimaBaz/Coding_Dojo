@@ -85,7 +85,9 @@ class SinglyLinkedList {
      *    or null when the end of the list has been reached.
      * @returns {SinglyLinkedList} This list.
      */
-    insertAtBackRecursive(data, runner = this.head) {}
+    insertAtBackRecursive(data, runner = this.head) {
+
+    }
 
     /**
      * Calls insertAtBack on each item of the given array.
@@ -113,7 +115,7 @@ class SinglyLinkedList {
      */
     insertAtFront(data) {
         // Insert head at the front of the list
-        let newNode = new ListNode(data)
+        const newNode = new ListNode(data)
 
         newNode.next = this.head;
         this.head = newNode;
@@ -128,8 +130,11 @@ class SinglyLinkedList {
      */
     removeHead() {
         // Find the head of the list and find what it's pointing to so you can make it equal to the head.
-        this.head = this.head.next
-        return this;
+        if (this.isEmpty()) return null
+
+        const oldhead = this.head
+        this.head = oldhead.next
+        return oldhead.data
     }
 
     // EXTRA
@@ -159,6 +164,67 @@ class SinglyLinkedList {
     }
 
     // ********************* END TUESDAY *********************
+
+    // ********************* WEDNESDAY *********************
+    /**
+     * Removes the last node of this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @returns {any} The data from the node that was removed.
+    */
+    removeBack() {
+        if (this.isEmpty()) {
+            return null
+        }
+
+        if (this.head.next == null) {
+            return this.removeHead()
+        }
+
+        let currNode = this.head
+
+        while (currNode.next.next != null) {
+            currNode = currNode.next
+        }
+        const prevNode = currNode.next.data
+        currNode.next = null;
+
+        return prevNode
+    }
+    
+    /**
+      * Determines whether or not the given search value exists in this list.
+      * - Time: O(?).
+      * - Space: O(?).
+      * @param {any} val The data to search for in the nodes of this list.
+      * @returns {boolean}
+    */
+    contains(val) {
+        if (this.isEmpty()) return false
+
+        let currNode = this.head
+
+        while (currNode) {
+            if (currNode.data == val) {
+                return true
+            }
+            currNode = currNode.next
+        }
+        return false
+    }
+    
+    /**
+     * Determines whether or not the given search value exists in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The data to search for in the nodes of this list.
+     * @param {?ListNode} current The current node during the traversal of this list
+     *    or null when the end of the list has been reached.
+     * @returns {boolean}
+    */
+    containsRecursive(val, current = this.head) {}
+
+    // ********************* END WEDNESDAY *********************
 
     /**
      * Converts this list into an array containing the data of each node.
@@ -203,11 +269,15 @@ class SinglyLinkedList {
     const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
     const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
     const unorderedList = new SinglyLinkedList().insertAtBackMany([
-        -5, -10, 4, -3, 6, 1, -7, -2,
+        -5, -10, 4, -3, 6, 1, -7, -2
         ]);
 
-    unorderedList.printList().insertAtFront(500).printList()
-    unorderedList.removeHead().printList()
+    // unorderedList.printList().insertAtFront(500).printList()
+    // console.log(unorderedList.contains(-3))
+    // console.log(secondThreeList.removeBack())
+    // console.log(firstThreeList.removeBack())
+    // console.log(unorderedList.removeBack())
+    // unorderedList.printList()
 
   /* node 4 connects to node 1, back to head */
   // const perfectLoopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
