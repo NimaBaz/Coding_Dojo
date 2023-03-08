@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "zzRzqUJQunacyCIHs3E1VQiCULaBetJMlcpKJg8a8uc=",
+  "Source": "Portfolio_II",
+  "BasePath": "_content/Portfolio_II",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Portfolio_II\\wwwroot",
+      "Source": "Portfolio_II",
+      "ContentRoot": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ASP.NET_Core\\Portfolio_II\\wwwroot\\",
+      "BasePath": "_content/Portfolio_II",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ASP.NET_Core\\Portfolio_II\\wwwroot\\css\\style.css",
+      "SourceId": "Portfolio_II",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ASP.NET_Core\\Portfolio_II\\wwwroot\\",
+      "BasePath": "_content/Portfolio_II",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
+}
