@@ -262,7 +262,7 @@ class SinglyLinkedList {
     removeVal(val) {
         if (this.isEmpty()) return false
 
-        if (this.head.data == val) {
+        if (this.head.data === val) {
             this.removeHead()
             return true
         }
@@ -292,7 +292,27 @@ class SinglyLinkedList {
      * @returns {boolean} To indicate whether the node was pre-pended or not.
      */
     prepend(newVal, targetVal) {
+        if (this.isEmpty()) return false
 
+        if (this.head.data === targetVal) {
+            this.insertAtFront(newVal)
+            return true
+        }
+
+        let prevNode = this.head
+        let runner = this.head.next
+        const newNode = new ListNode(newVal)
+
+        while (runner) {
+            if (runner.data === targetVal) {
+                prevNode.next = newNode
+                newNode.next = runner
+                return true
+            }
+            prevNode = runner
+            runner = runner.next
+        }
+        return false
     }
 
  // ********************* END THURSDAY *********************
@@ -351,7 +371,9 @@ class SinglyLinkedList {
     // unorderedList.printList()
     // console.log(unorderedList.secondToLast())
     // unorderedList.printList()
-    // console.log(unorderedList.removeVal(6))
+    // console.log(unorderedList.removeVal(-2))
+    // unorderedList.printList()
+    // console.log(unorderedList.prepend(8, -7))
     // unorderedList.printList()
 
   /* node 4 connects to node 1, back to head */
