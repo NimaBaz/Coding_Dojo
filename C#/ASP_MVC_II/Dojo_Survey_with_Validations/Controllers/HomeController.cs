@@ -6,7 +6,6 @@ namespace Dojo_Survey.Controllers;
 
 public class HomeController : Controller
 {
-    static User newUser;
 
     private readonly ILogger<HomeController> _logger;
 
@@ -49,7 +48,7 @@ public class HomeController : Controller
 
     [HttpGet("/results")]
     public IActionResult Results() {
-        return View("Results", newUser);
+        return View("Results");
     }
 
     [HttpPost("/process")]
@@ -65,9 +64,7 @@ public class HomeController : Controller
         Console.WriteLine($"My favorite language is: {users.Language}");
         Console.WriteLine($"My comment is: {users.Message}");
 
-        newUser = users;
-
-        return RedirectToAction("Results");
+        return View("Results", users);
     }
 
     [HttpGet("{**path}")]
