@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Form Page";
+}
+
+
+@model User
+
+<h1>User Form</h1>
+
+<form asp-controller="Home" class="form-group" asp-action="AddUser" method="post">
+
+    <div>
+        <span asp-validation-for="FirstName" class="fst-italic"></span>
+        <label asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName" />
+    </div>
+
+    <div>
+        <span asp-validation-for="LastName" class="fst-italic"></span>
+        <label for="LastName"></label>
+        <input class="form-control" asp-for="LastName" />
+    </div>
+
+    <span asp-validation-for="Dojo" class="fst-italic"></span>
+    <div>
+        <label asp-for="Dojo"></label>
+        <select asp-for="Dojo">
+            <option value="" disabled selected hidden></option>
+            <option value="San Jose">San Jose</option>
+            <option value="Washington">Washington</option>
+            <option value="Chicago">Chicago</option>
+            <option value="New York">New York</option>
+        </select>
+    </div>
+
+    <span asp-validation-for="Language" class="fst-italic"></span>
+    <div>
+        <label asp-for="Language"></label>
+        <select asp-for="Language">
+            <option disabled selected hidden></option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+    </div>
+
+    <div>
+        <span asp-validation-for="Message" class="fst-italic"></span>
+        <label asp-for="Message"></label>
+        <input class="form-control" asp-for="Message" />
+    </div>
+
+    <input class="btn" type="submit" value="Submit"/>
+</form>

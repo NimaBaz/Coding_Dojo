@@ -12,11 +12,14 @@
     <h1>User Form</h1>
 
     <form class="form-group" action="/process" method="post">
-        <label for="NameField">Name:</label>
-        <input class="form-control" type="text" name="NameField"/>
+        <label for="FirstName">First Name:</label>
+        <input class="form-control" type="text" name="FirstName"/>
 
-        <label for="DojoField">Dojo Location:</label>
-        <select name="DojoField">
+        <label for="LastName">Last Name:</label>
+        <input class="form-control" type="text" name="LastName"/>
+
+        <label for="Dojo">Dojo Location:</label>
+        <select name="Dojo">
             <option value="" disabled selected hidden></option>
             <option value="San Jose">San Jose</option>
             <option value="Washington">Washington</option>
@@ -24,8 +27,8 @@
             <option value="New York">New York</option>
         </select>
 
-        <label for="LanguageField">Favorite Language:</label>
-        <select name="LanguageField">
+        <label for="Language">Favorite Language:</label>
+        <select name="Language">
             <option disabled selected hidden></option>
             <option value="Python">Python</option>
             <option value="Java">Java</option>
@@ -33,8 +36,8 @@
             <option value="JavaScript">JavaScript</option>
         </select>
 
-        <label for="MessageField">Comment:</label>
-        <input class="form-control" type="text" name="MessageField"/>
+        <label for="Message">Comment:</label>
+        <input class="form-control" type="text" name="Message"/>
 
         <input class="btn" type="submit" value="Submit"/>
     </form>

@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Results Page";
+}
+
+@model User
+
+<h1>Submitted Info</h1>
+
+<p>First Name: @Model.FirstName</p>
+<p>Last Name: @Model.LastName</p>
+<p>Dojo: @Model.Dojo</p>
+<p>Favorite Language: @Model.Language</p>
+
+@{
+    if (Model.Message == null) {
+        <p>
+            Comment: <span class="no-message">No Comment</span>
+        </p>
+    }
+    else {
+        <p>Comment: @Model.Message</p>
+    }
+}
+
+<a class="btn" href="/users/form">Go Back</a>

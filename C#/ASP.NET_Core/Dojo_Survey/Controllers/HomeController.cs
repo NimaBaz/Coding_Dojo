@@ -48,8 +48,9 @@ public class HomeController : Controller
     [HttpGet("/results")]
     public IActionResult Results() {
 
-        if (TempData.ContainsKey("name")) {
-            ViewBag.name = TempData["name"];
+        if (TempData.ContainsKey("firstname")) {
+            ViewBag.firstname = TempData["firstname"];
+            ViewBag.lastname = TempData["lastname"];
             ViewBag.dojo = TempData["dojo"];
             ViewBag.language = TempData["language"];
             ViewBag.message = TempData["message"];
@@ -59,17 +60,19 @@ public class HomeController : Controller
     }
 
     [HttpPost("process")]
-    public RedirectToActionResult AddUser(string NameField, string DojoField, string LanguageField, string MessageField) {
+    public RedirectToActionResult AddUser(string FirstName, string LastName, string Dojo, string Language, string Message) {
 
-        Console.WriteLine($"My name is: {NameField}");
-        Console.WriteLine($"My Dojo is: {DojoField}");
-        Console.WriteLine($"My favorite language is: {LanguageField}");
-        Console.WriteLine($"My comment is: {MessageField}");
+        Console.WriteLine($"My first name is: {FirstName}");
+        Console.WriteLine($"My last name is: {LastName}");
+        Console.WriteLine($"My Dojo is: {Dojo}");
+        Console.WriteLine($"My favorite language is: {Language}");
+        Console.WriteLine($"My comment is: {Message}");
 
-        TempData["name"] = NameField;
-        TempData["dojo"] = DojoField;
-        TempData["language"] = LanguageField;
-        TempData["message"] = MessageField;
+        TempData["firstname"] = FirstName;
+        TempData["lastname"] = LastName;
+        TempData["dojo"] = Dojo;
+        TempData["language"] = Language;
+        TempData["message"] = Message;
 
         return RedirectToAction("Results");
     }
