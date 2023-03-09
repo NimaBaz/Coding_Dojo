@@ -226,6 +226,77 @@ class SinglyLinkedList {
 
     // ********************* END WEDNESDAY *********************
 
+    // ********************* THURSDAY *********************
+    /**
+     * Retrieves the data of the second to last node in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @returns {any} The data of the second to last node or null if there is no
+     *    second to last node.
+     */
+    secondToLast() {
+        if (this.isEmpty()) {
+            return null
+        }
+
+        if (this.head.next == null) {
+            return this.removeHead()
+        }
+
+        let runner = this.head
+
+        while (runner.next.next != null) {
+            runner = runner.next
+        }
+        return runner.data
+    }
+
+    /**
+     * Removes the node that has the matching given val as it's data.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The value to compare to the node's data to find the
+     *    node to be removed.
+     * @returns {boolean} Indicates if a node was removed or not.
+     */
+    removeVal(val) {
+        if (this.isEmpty()) return false
+
+        if (this.head.data == val) {
+            this.removeHead()
+            return true
+        }
+
+        let prevNode = this.head
+        let runner = this.head.next
+
+        while (runner) {
+            if (runner.data == val) {
+                prevNode.next = runner.next
+                return true
+            }
+            prevNode = runner
+            runner = runner.next
+        }
+        return false
+    }
+
+    // EXTRA
+    /**
+     * Inserts a new node before a node that has the given value as its data.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} newVal The value to use for the new node that is being added.
+     * @param {any} targetVal The value to use to find the node that the newVal
+     *    should be inserted in front of.
+     * @returns {boolean} To indicate whether the node was pre-pended or not.
+     */
+    prepend(newVal, targetVal) {
+
+    }
+
+ // ********************* END THURSDAY *********************
+
     /**
      * Converts this list into an array containing the data of each node.
      * - Time: O(n) linear.
@@ -277,6 +348,10 @@ class SinglyLinkedList {
     // console.log(secondThreeList.removeBack())
     // console.log(firstThreeList.removeBack())
     // console.log(unorderedList.removeBack())
+    // unorderedList.printList()
+    // console.log(unorderedList.secondToLast())
+    // unorderedList.printList()
+    // console.log(unorderedList.removeVal(6))
     // unorderedList.printList()
 
   /* node 4 connects to node 1, back to head */
