@@ -317,6 +317,103 @@ class SinglyLinkedList {
 
  // ********************* END THURSDAY *********************
 
+// ********************* FRIDAY *********************
+/**
+ * Concatenates the nodes of a given list onto the back of this list.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {SinglyLinkedList} addList An instance of a different list whose
+ *    whose nodes will be added to the back of this list.
+ * @returns {SinglyLinkedList} This list with the added nodes.
+ */
+concat(addList) {
+    let runner = this.head
+
+    if (runner === null) {
+        this.head = addList.head
+        return true
+    }
+
+    while (runner.next) {
+        runner = runner.next
+    }
+    runner.next = addList.head
+
+    return this
+
+}
+
+/**
+ * Finds the node with the smallest data and moves that node to the front of
+ * this list.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @returns {SinglyLinkedList} This list.
+ */
+moveMinToFront() {
+    if(this.isEmpty()) return this;
+    let runner = this.head;
+    let minVal = runner.data;
+    while(runner){
+        if(runner.data < minVal) minVal = runner.data;
+        runner = runner.next;
+    }
+    this.removeVal(minVal);
+    this.insertAtFront(minVal);
+    return this;
+}
+
+moveMinToFrontIdeas() {
+    if(this.isEmpty()) return this;
+    let runner = this.head;
+    let minValNode = runner;
+    let follower = null;
+    let minValFollower = null;
+    while(runner){
+        if(runner.data < minValNode.data) {
+            minValNode = runner;
+            minValFollower = follower;
+        }
+        follower = runner;
+        runner = runner.next;
+    }
+    minValFollower.next = minValNode.next;
+
+    this.insertAtFront(minValNode.data);
+    return this;
+}
+
+// EXTRA
+/**
+ * Splits this list into two lists where the 2nd list starts with the node
+ * that has the given value.
+ * splitOnVal(5) for the list (1=>3=>5=>2=>4) will change list to (1=>3)
+ * and the return value will be a new list containing (5=>2=>4)
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {any} val The value in the node that the list should be split on.
+ * @returns {SinglyLinkedList} The split list containing the nodes that are
+ *    no longer in this list.
+ */
+splitOnVal(val) {
+    if(this.isEmpty()) return this;
+    let runner = this.head;
+    let follower = null;
+    while(runner){
+        if(runner.data ===val){
+            follower.next = null;
+            const newList = new SinglyLinkedList();
+            newList.head= runner;
+            return newList;
+        }
+        follower = runner;
+        runner = runner.next;
+    }
+    return this;
+}
+
+// ********************* END FRIDAY *********************
+
     /**
      * Converts this list into an array containing the data of each node.
      * - Time: O(n) linear.
@@ -375,6 +472,8 @@ class SinglyLinkedList {
     // unorderedList.printList()
     // console.log(unorderedList.prepend(8, -7))
     // unorderedList.printList()
+    // console.log(unorderedList.concat(secondThreeList).printList())
+    // console.log(unorderedList.moveMinToFront(),printList())
 
   /* node 4 connects to node 1, back to head */
   // const perfectLoopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
