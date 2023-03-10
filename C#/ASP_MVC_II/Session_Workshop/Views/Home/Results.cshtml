@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Results Page";
+}
+
+<h1>Welcome @Context.Session.GetString("firstname")</h1>
+
+<h2>@Model</h2>
+
+<form asp-controller="Home" class="form-group" asp-action="Counter" method="post">
+    <div class="container">
+        <button name="num" class="btn1" value="1" type="submit">+1</button>
+        <button name="num" class="btn1" value="2" type="submit">-1</button>
+    </div>
+    <div class="container">
+        <button name="num" class="btn1" value="3" type="submit">x2</button>
+        <button name="num" class="btn1" value="4" type="submit">+Random</button>
+    </div>
+</form>
+
+<a class="btn" href="/ClearSession">Logout</a>

@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+
+<div class="login-reg">
+
+    <div class="register">
+
+        <h1>Register</h1>
+
+        <section class="text-center text-lg-start">
+            <div class="card mb-3">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="form">
+                        <div class="card-body py-5 px-md-5">
+
+                            <form asp-controller="Home" class="form-group" asp-action="AddUser" method="post">
+
+                                <span asp-validation-for="FirstName" class="fst-italic"></span>
+                                <div>
+                                    <label for="FirstName">First Name</label>
+                                    <input class="form-control" asp-for="FirstName" />
+                                </div>
+
+                                <span asp-validation-for="LastName" class="fst-italic"></span>
+                                <div>
+                                    <label for="LastName">Last Name</label>
+                                    <input class="form-control" asp-for="LastName" />
+                                </div>
+
+                                <span asp-validation-for="Email" class="fst-italic"></span>
+                                <div>
+                                    <label for="Email">Email</label>
+                                    <input class="form-control" asp-for="Email" />
+                                </div>
+
+                                <span asp-validation-for="DoB" class="fst-italic"></span>
+                                <div>
+                                    <label for="DoB">Date of Birth</label>
+                                    <input class="form-control" asp-for="DoB" />
+                                </div>
+
+                                <span asp-validation-for="Password" class="fst-italic"></span>
+                                <div>
+                                    <label for="Password">Password</label>
+                                    <input class="form-control" asp-for="Password" value="Password123!"/>
+                                </div>
+
+                                <span asp-validation-for="ConfirmPassword" class="fst-italic"></span>
+                                <div>
+                                    <label for="ConfirmPassword">Confirm Password</label>
+                                    <input class="form-control" asp-for="ConfirmPassword" value="Password123!"/>
+                                </div>
+
+                                <input class="btn" type="submit" value="Register"/>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="Login">
+
+        <h1>Login</h1>
+
+        <section class="text-center text-lg-start">
+            <div class="card mb-3">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="form">
+                        <div class="card-body py-5 px-md-5">
+
+                            <form asp-controller="Home" class="form-group" asp-action="AddUser" method="post">
+
+                                <span asp-validation-for="Email" class="fst-italic"></span>
+                                <div>
+                                    <label for="Email">Email</label>
+                                    <input class="form-control" asp-for="Email" />
+                                </div>
+
+                                <span asp-validation-for="Password" class="fst-italic"></span>
+                                <div>
+                                    <label for="Password">Password</label>
+                                    <input class="form-control" asp-for="Password" />
+                                </div>
+
+                                <input class="btn" type="submit" value="Login"/>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</div>
