@@ -87,13 +87,14 @@ public class HomeController : Controller
         // 2. Find the old version of the instance in your database
         Dish? OldDish = _context.Dishes.FirstOrDefault(i => i.DishId == DishId);
         // 3. Verify that the new instance passes validations
-        if(!ModelState.IsValid)
+        if(!ModelState.IsValid || OldDish == null)
         {
             // 3.5. If it does not pass validations, show error messages
             // Be sure to pass the form back in so you don't lose your changes
             // It should be the old version so we can keep the ID
             return View("UpdateItem", OldDish);
         }
+        
         // 4. Overwrite the old version with the new version
         // Yes, this has to be done one attribute at a time
         OldDish.Name = newDish.Name;
@@ -118,6 +119,11 @@ public class HomeController : Controller
     public IActionResult DestroyDish(int DishId)
     {
         Dish? DishToDelete = _context.Dishes.SingleOrDefault(i => i.DishId == DishId);
+        if (DishToDelete == null)
+        {
+            return RedirectToAction("ShowItem");
+        }
+
         _context.Dishes.Remove(DishToDelete);
         _context.SaveChanges();
         return RedirectToAction("Index");
