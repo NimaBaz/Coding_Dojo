@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Show Page";
+}
+
+@model Dish
+
+<h1>Resturant Dish</h1>
+
+<p>Name: @Model.Name</p>
+<p>Chef: @Model.Chef</p>
+<p>Tastiness: @Model.Tastiness</p>
+<p>Calories: @Model.Calories</p>
+<p>Description: @Model.Description</p>
+
+<div class="container">
+    <a class="btn" href="/">Home</a>
+    |
+    <form asp-action="UpdateDish" asp-controller="Home" asp-route-DishId="@Model.DishId" method="post">
+        <input class="btn" type="submit" value="Update">
+    </form>
+    |
+    <form asp-action="DestroyDish" asp-controller="Home" asp-route-DishId="@Model.DishId" method="post">
+        <input class="btn" type="submit" value="Delete">
+    </form>
+</div>

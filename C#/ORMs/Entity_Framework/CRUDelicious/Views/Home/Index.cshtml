@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Dish
+
+<h1>Resturant Dishes</h1>
+
+@foreach (var item in ViewBag.AllDishes)
+{
+    <a href="dishes/@item.DishId">@item.Name</a>
+    <p>Chef: @item.Chef</p>
+    <p>Tastiness: @item.Tastiness</p>
+    <p>Calories: @item.Calories</p>
+    <p>Description: @item.Description</p>
+    <hr/>
+}
+
+<a class="btn" href="dishes/new">Create</a>
