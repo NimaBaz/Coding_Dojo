@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Show All Page";
+}
+
+@model Dish
+
+<h1>Welcome @Context.Session.GetString("firstname")</h1>
+
+<h2>Resturant Dishes</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Chef</th>
+                <th>Tastiness</th>
+                <th>Calories</th>
+                <th>Description</th>
+                <th></th>
+                <th>Actions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.AllDishes)
+            {
+                <tr>
+                    <td><a href="/dishes/@item.DishId">@item.Name</a></td>
+                    <td>@item.Chef</td>
+                    <td>@item.Tastiness</td>
+                    <td>@item.Calories</td>
+                    <td>@item.Description</td>
+                    <td>
+                        <a href="/dishes/@item.DishId" class="btn">View</a>
+                    </td>
+                    <td>
+                        <form asp-action="UpdateDish" asp-controller="CRUD" asp-route-DishId="@item.DishId" method="post">
+                            <input class="btn" type="submit" value="Edit">
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="DestroyDish" asp-controller="CRUD" asp-route-DishId="@item.DishId" method="post">
+                            <input class="btn" type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a class="btn" href="/dishes/new">Create</a>
