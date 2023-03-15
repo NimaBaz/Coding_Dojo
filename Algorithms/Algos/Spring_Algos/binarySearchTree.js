@@ -206,6 +206,75 @@
 
   // ************************ END TUSDAY ************************
 
+  // ************************ WEDNESDAY ************************
+
+    /**
+     * Inserts a new node with the given newVal in the right place to preserver
+     * the order of this tree.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} newVal The data to be added to a new node.
+     * @returns {BinarySearchTree} This tree.
+     */
+    insert(newVal) {
+        const newNode = new BSTNode(newVal)
+
+        let current = this.root
+
+        while (current) {
+            if (newNode.data > current.data) {
+                if (!current.right) {
+                    current.right = newNode
+                    return this
+                }
+                current = current.right
+            }
+            else {
+                if (!current.left) {
+                    current.left = newNode
+                    return this
+                }
+                current = current.left
+            }
+        }
+        this.root = newNode
+        return this
+    }
+
+    /**
+     * Inserts a new node with the given newVal in the right place to preserver
+     * the order of this tree.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} newVal The data to be added to a new node.
+     * @param {Node} curr The node that is currently accessed from the tree as
+     *    the tree is being traversed.
+     * @returns {BinarySearchTree} This tree.
+     */
+    insertRecursive(newVal, curr = this.root) {
+        if (!curr) {
+            this.root = new BSTNode(newVal)
+            return this
+        }
+
+        if (newVal > curr.data) {
+            if (!curr.right) {
+                curr.right = new BSTNode(newVal)
+                return this
+            }
+            return this.insertRecursive(newVal, curr.right)
+        }
+
+        if (!curr.left) {
+            curr.left = new BSTNode(newVal)
+            return this
+        }
+        return this.insertRecursive(newVal, curr.left)
+    }
+
+
+  // ************************ END WEDNESDAY ************************
+
         // Logs this tree horizontally with the root on the left.
         print(node = this.root, spaceCnt = 0, spaceIncr = 10) {
         if (!node) {
@@ -278,18 +347,19 @@
     /***************** Uncomment after insert method is created. ****************/
     // const fullTree = new BinarySearchTree();
     // fullTree
-    //   .insert(25)
-    //   .insert(15)
-    //   .insert(10)
-    //   .insert(22)
-    //   .insert(4)
-    //   .insert(12)
-    //   .insert(18)
-    //   .insert(24)
-    //   .insert(50)
-    //   .insert(35)
-    //   .insert(70)
-    //   .insert(31)
-    //   .insert(44)
-    //   .insert(66)
-    //   .insert(90);
+    // .insertRecursive(25)
+    // .insertRecursive(15)
+    // .insertRecursive(10)
+    // .insertRecursive(22)
+    // .insertRecursive(4)
+    // .insertRecursive(12)
+    // .insertRecursive(18)
+    // .insertRecursive(24)
+    // .insertRecursive(50)
+    // .insertRecursive(35)
+    // .insertRecursive(70)
+    // .insertRecursive(31)
+    // .insertRecursive(44)
+    // .insertRecursive(66)
+    // .insertRecursive(90);
+    // fullTree.print()
