@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Update Page";
+}
+
+@model Dish
+
+<h2>Update a Dish</h2>
+<form asp-action="UpdateDish" asp-controller="CRUD" asp-route-DishId="@Model.DishId" method="post" class="col-8">
+    <div class="mb-3">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserId"></label>
+        <select asp-for="UserId">
+            @foreach (User item in ViewBag.AllUsers)
+            {
+                <option value="@item.UserId">@item.FirstName @item.LastName</option>
+            }
+        </select>
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    <div class="mb-3">
+        <label asp-for="Tastiness"></label>
+        <input asp-for="Tastiness" class="form-control">
+        <span asp-validation-for="Tastiness" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Calories"></label>
+        <input asp-for="Calories" class="form-control">
+        <span asp-validation-for="Calories" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input class="btn" type="submit" value="Update">
+    </div>
+    <a class="btn" href="/dishes/@Model.DishId">Back</a>
+</form>
