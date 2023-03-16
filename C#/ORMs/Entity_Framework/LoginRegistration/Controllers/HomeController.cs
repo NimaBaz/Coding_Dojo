@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using LoginRegistration.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LoginRegistration.Controllers;
 public class HomeController : Controller
@@ -41,10 +42,12 @@ public class HomeController : Controller
     public IActionResult ShowAllDishes()
     {
         // Now any time we want to access our database we use _context
-        List<Dish> AllDishes = _context.Dishes.ToList();
-        ViewBag.AllDishes = AllDishes;
+        MyViewModel MyModel = new MyViewModel
+        {
+            AllDishes = _context.Dishes.Include(u => u.User).ToList()
+        };
 
-        return View("ShowAllDishes");
+        return View("ShowAllDishes", MyModel);
     }
 
 //////////////////////////////////////////////////////!DASHBOARD//////////////////////////////////////////////////////////////////////////

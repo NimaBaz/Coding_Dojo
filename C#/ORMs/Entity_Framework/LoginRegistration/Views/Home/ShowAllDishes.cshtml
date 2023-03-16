@@ -2,9 +2,7 @@
     ViewData["Title"] = "Show All Page";
 }
 
-@model Dish
-
-<h1>Welcome @Context.Session.GetString("firstname")</h1>
+@model MyViewModel
 
 <h2>Resturant Dishes</h2>
 
@@ -23,27 +21,28 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in ViewBag.AllDishes)
+            @foreach (Dish item in Model.AllDishes)
             {
                 <tr>
                     <td><a href="/dishes/@item.DishId">@item.Name</a></td>
-                    <td>@item.Chef</td>
+                    <td>@item.User.FirstName @item.User.LastName</td>
                     <td>@item.Tastiness</td>
                     <td>@item.Calories</td>
                     <td>@item.Description</td>
                     <td>
                         <a href="/dishes/@item.DishId" class="btn">View</a>
                     </td>
+                    @if (item.User.UserId == @Context.Session.GetInt32("UserId"))
+                    {
                     <td>
-                        <form asp-action="UpdateDish" asp-controller="CRUD" asp-route-DishId="@item.DishId" method="post">
-                            <input class="btn" type="submit" value="Edit">
-                        </form>
+                        <a href="/dishes/@item.DishId/edit" class="btn">Edit</a>
                     </td>
                     <td>
                         <form asp-action="DestroyDish" asp-controller="CRUD" asp-route-DishId="@item.DishId" method="post">
                             <input class="btn" type="submit" value="Delete">
                         </form>
                     </td>
+                    }
                 </tr>
             }
         </tbody>

@@ -7,19 +7,19 @@
 <h1>Resturant Dish</h1>
 
 <p>Name: @Model.Name</p>
-<p>Chef: @Model.Chef</p>
+<p>Chef: @Model.User.FirstName @Model.User.LastName</p>
 <p>Tastiness: @Model.Tastiness</p>
 <p>Calories: @Model.Calories</p>
 <p>Description: @Model.Description</p>
 
-<div class="container">
-    <a class="btn" href="/dishes/show">Home</a>
-    |
-    <form asp-action="UpdateDish" asp-controller="CRUD" asp-route-DishId="@Model.DishId" method="post">
-        <input class="btn" type="submit" value="Edit">
-    </form>
-    |
+<a class="btn" href="/dishes/show">Home</a>
+
+@if (Model.User.UserId == @Context.Session.GetInt32("UserId"))
+{
+    <a href="/dishes/@Model.DishId/edit" class="btn">Edit</a>
     <form asp-action="DestroyDish" asp-controller="CRUD" asp-route-DishId="@Model.DishId" method="post">
         <input class="btn" type="submit" value="Delete">
     </form>
-</div>
+}
+
+

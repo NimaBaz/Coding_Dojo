@@ -1,6 +1,7 @@
 // Using statements
 using Microsoft.AspNetCore.Mvc;
 using LoginRegistration.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LoginRegistration.Controllers;
 public class CRUDController : Controller
@@ -27,6 +28,7 @@ public class CRUDController : Controller
     [HttpGet("/dishes/new")]
     public IActionResult NewItem()
     {
+        ViewBag.AllUsers = _context.Users;
         return View("NewItem");
     }
 
@@ -36,7 +38,7 @@ public class CRUDController : Controller
         if(!ModelState.IsValid)
         {
             return View("NewItem", newDish);
-        } 
+        }
         // We can take the Dish object created from a form submission
         // and pass the object through the .Add() method
         // Remember that _context is our database
@@ -57,7 +59,7 @@ public class CRUDController : Controller
     [HttpGet("/dishes/{id}")]
     public IActionResult ShowItem(int id)
     {
-        Dish? OneDish = _context.Dishes.FirstOrDefault(a => a.DishId == id);
+        Dish? OneDish = _context.Dishes.Include(u => u.User).FirstOrDefault(a => a.DishId == id);
         return View("ShowItem", OneDish);
     }
 
@@ -70,6 +72,7 @@ public class CRUDController : Controller
     public IActionResult UpdateItem(int DishId)
     {
         Dish? DishToEdit = _context.Dishes.FirstOrDefault(i => i.DishId == DishId);
+        ViewBag.AllUsers = _context.Users;
         return View("UpdateItem", DishToEdit);
     }
 
@@ -91,7 +94,7 @@ public class CRUDController : Controller
         // 4. Overwrite the old version with the new version
         // Yes, this has to be done one attribute at a time
         OldDish.Name = newDish.Name;
-        OldDish.Chef = newDish.Chef;
+        OldDish.UserId = newDish.UserId;
         OldDish.Tastiness = newDish.Tastiness;
         OldDish.Calories = newDish.Calories;
         OldDish.Description = newDish.Description;

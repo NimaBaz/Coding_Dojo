@@ -44,4 +44,7 @@ public class User
 
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
+    // Our navigation property to track the many Posts our user has made
+    public List<Dish> AllDishes { get; set; } = new List<Dish>();
+
 }

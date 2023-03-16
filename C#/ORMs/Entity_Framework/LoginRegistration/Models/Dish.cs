@@ -11,8 +11,6 @@ public class Dish
 
     public string Name { get; set; }
 
-    public string Chef { get; set; }
-
     public int Tastiness { get; set; }
 
     public int Calories { get; set; }
@@ -22,4 +20,13 @@ public class Dish
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+    // This is the ID we will use to know which User made the post
+    // This name should match the name of the key from the User table (UserId)
+    [Required]
+    [Display(Name = "Chef")]
+    public int UserId { get; set; }
+
+    // Our navigation property to track which User made this Post
+    public User? User { get; set; }
 }
