@@ -1,0 +1,1 @@
+For the Chefs and Dishes assignment I used the CRUDelicious assisnment. I basically built everything off of CRUDelicious. I did login and reg and Chefs N Dishes on the CRUDelicious assignment. My Chefs are the users from login and reg. If you see the program all the code is there for a one to many relationship plus everything else.

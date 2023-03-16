@@ -11,12 +11,18 @@ public class Dish
     
     public int DishId { get; set; }
 
+    [Required(ErrorMessage = "Please enter a dish name")] 
+    [MinLength(2, ErrorMessage = "Dish name must be at least 2 characters long")]
     public string Name { get; set; }
 
+    [Required(ErrorMessage = "Please enter how tasty the dish is")]
     public int Tastiness { get; set; }
 
+    [Required(ErrorMessage = "Please enter the amount of calories")]
     public int Calories { get; set; }
 
+    [Required]
+    [MinLength(3, ErrorMessage = "Must be at least 3 characters long"), MaxLength(255, ErrorMessage = "Max length is 255 characters long")]
     public string Description { get; set; }
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
