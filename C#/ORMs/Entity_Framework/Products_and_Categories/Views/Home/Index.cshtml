@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+
+<div class="login-reg">
+
+    <div class="register">
+
+        <h1>Register</h1>
+
+        <section class="text-center text-lg-start">
+            <div class="card mb-3">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="form">
+                        <div class="card-body py-5 px-md-5">
+
+                            @await Html.PartialAsync("~/Views/User/_RegisterForm.cshtml")
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="Login">
+
+        <h1>Login</h1>
+
+        <section class="text-center text-lg-start">
+            <div class="card mb-3">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="form">
+                        <div class="card-body py-5 px-md-5">
+
+                            @await Html.PartialAsync("~/Views/User/_LoginForm.cshtml")
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</div>

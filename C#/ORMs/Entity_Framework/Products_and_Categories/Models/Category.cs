@@ -1,0 +1,34 @@
+#pragma warning disable CS8618
+
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Products_and_Categories.Models;
+
+public class Category
+{
+    [Key]
+    
+    public int CategoryId { get; set; }
+
+    [Required(ErrorMessage = "Please enter a product name")] 
+    [MinLength(2, ErrorMessage = "Product name must be at least 2 characters long")]
+    public string Name { get; set; }
+
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    
+    public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+    // This is the ID we will use to know which User made the post
+    // This name should match the name of the key from the User table (UserId)
+    [Required]
+    [Display(Name = "User")]
+    public int UserId { get; set; }
+
+    // Our navigation property to track which User made this Post
+    public User? User { get; set; }
+
+    public List<Association> AllAssociations { get; set; } = new List<Association>();
+
+    public List<ProductCategory> AllProducts { get; set; } = new List<ProductCategory>();
+}

@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Show All Page";
+}
+
+@model MyViewModel
+
+<h2>Categories</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Product</th>
+                <th></th>
+                <th>Actions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Category item in Model.AllCategories)
+            {
+                <tr>
+                    <td><a href="/category/@item.CategoryId">@item.Name</a></td>
+                    @foreach (var i in item.AllProducts)
+                    {
+                        <td>@i.Item.Name</td>
+                    }
+                    <td>
+                        <a href="/category/@item.CategoryId" class="btn">View</a>
+                    </td>
+                    @if (item.User.UserId == @Context.Session.GetInt32("UserId"))
+                    {
+                    <td>
+                        <a href="/category/@item.CategoryId/edit" class="btn">Edit</a>
+                    </td>
+                    <td>
+                        <form asp-action="DestroyCategory" asp-controller="Category" asp-route-CategoryId="@item.CategoryId" method="post">
+                            <input class="btn" type="submit" value="Delete">
+                        </form>
+                    </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a class="btn" href="/category/new">Create</a>

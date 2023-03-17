@@ -1,0 +1,20 @@
+@model LoginUser
+
+<div>
+    <form asp-controller="User" class="form-group" asp-action="Login" method="post">
+
+        <span asp-validation-for="EmailLogin" class="fst-italic"></span>
+        <div>
+            <label asp-for="EmailLogin"></label>
+            <input class="form-control" asp-for="EmailLogin" />
+        </div>
+
+        <span asp-validation-for="PasswordLogin" class="fst-italic"></span>
+        <div>
+            <label asp-for="PasswordLogin"></label>
+            <input class="form-control" asp-for="PasswordLogin" value="Password123!"/>
+        </div>
+
+        <input class="btn" type="submit" value="Login"/>
+    </form>
+</div>

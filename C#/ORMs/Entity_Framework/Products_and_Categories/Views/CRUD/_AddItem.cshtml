@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Show Page";
+}
+
+@model ProductCategory
+
+<form asp-action="AddItem" asp-controller="Category" method="post" class="col-8">
+    <input asp-for="CategoryId" type="hidden" value="@ViewBag.CategoryId">
+    <div class="mb-3">
+        <label asp-for="ItemId"></label>
+        <select asp-for="ItemId">
+            @foreach (Item item in ViewBag.AllItems)
+            {
+                <option value="@item.ItemId">@item.Name</option>
+            }
+        </select>
+        <span asp-validation-for="ItemId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input class="btn" type="submit" value="Add">
+    </div>
+</form>

@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Show Page";
+}
+
+@model MyViewModel
+
+<h1>Products</h1>
+
+<p>Name: @Model.Item.Name</p>
+<p>User: @Model.Item.User.FirstName @Model.Item.User.LastName</p>
+<p>Price: @Model.Item.Price</p>
+<p>Description: @Model.Item.Description</p>
+
+<a class="btn" href="/products/show">Products</a>
+
+@if (Model.Item.User.UserId == @Context.Session.GetInt32("UserId"))
+{
+    <a href="/products/@Model.Item.ItemId/edit" class="btn">Edit</a>
+    <form asp-action="DestroyItem" asp-controller="Item" asp-route-ItemId="@Model.Item.ItemId" method="post">
+        <input class="btn" type="submit" value="Delete">
+    </form>
+}
+
+
+
+<h1>Add a Category</h1>
+<section class="text-center text-lg-start">
+            <div class="card mb-3">
+                <div class="row g-0 d-flex align-items-center">
+                    <div class="form">
+                        <div class="card-body py-5 px-md-5">
+
+                            @await Html.PartialAsync("~/Views/CRUD/_AddCategory.cshtml", Model.ProductCategory)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+

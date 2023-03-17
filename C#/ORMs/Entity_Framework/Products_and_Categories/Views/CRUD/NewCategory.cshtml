@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Create Page";
+}
+
+@model Category
+
+<h2>Make a new Category</h2>
+<form asp-action="CreateCategory" asp-controller="Category" method="post" class="col-8">
+    <div class="mb-3">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input class="btn" type="submit" value="Add">
+    </div>
+    <a class="btn" href="/category/show">Back</a>
+</form>

@@ -8,69 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LoginRegistration
 build_property.RootNamespace = LoginRegistration
-build_property.ProjectDir = C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Entity_Framework\LoginRegistration\
+build_property.ProjectDir = c:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Entity_Framework\ChefsNDishes\LoginRegistration\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Entity_Framework\LoginRegistration
+build_property.MSBuildProjectDirectory = c:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Entity_Framework\ChefsNDishes\LoginRegistration
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/CRUD/NewItem.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/CRUD/NewItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1JVRFxOZXdJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/CRUD/NewUser.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/CRUD/NewUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1JVRFxOZXdVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/CRUD/ShowItem.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/CRUD/ShowItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1JVRFxTaG93SXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/CRUD/UpdateItem.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/CRUD/UpdateItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1JVRFxVcGRhdGVJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/Home/404.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/Home/404.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVw0MDQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/Home/Index.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/Home/ShowAllDishes.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/Home/ShowAllDishes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93QWxsRGlzaGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/Home/ShowAllUsers.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/Home/ShowAllUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93QWxsVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/Shared/Error.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/User/_LoginForm.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/User/_LoginForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfTG9naW5Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/User/_RegisterForm.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/User/_RegisterForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfUmVnaXN0ZXJGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/_ViewImports.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/_ViewStart.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/LoginRegistration/Views/Shared/_Layout.cshtml]
+[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Entity_Framework/ChefsNDishes/LoginRegistration/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-age8osfxt1

@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Show All Page";
+}
+
+@model MyViewModel
+
+<h2>Products</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>User</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th></th>
+                <th>Actions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Item item in Model.AllItems)
+            {
+                <tr>
+                    <td><a href="/products/@item.ItemId">@item.Name</a></td>
+                    <td>@item.User.FirstName @item.User.LastName</td>
+                    <td>@item.Price</td>
+                    <td>@item.Description</td>
+                    @foreach (var c in item.AllCategories)
+                    {
+                        <td>@c.Category.Name</td>
+                    }
+                    <td>
+                        <a href="/products/@item.ItemId" class="btn">View</a>
+                    </td>
+                    @if (item.User.UserId == @Context.Session.GetInt32("UserId"))
+                    {
+                    <td>
+                        <a href="/products/@item.ItemId/edit" class="btn">Edit</a>
+                    </td>
+                    <td>
+                        <form asp-action="DestroyItem" asp-controller="Item" asp-route-ItemId="@item.ItemId" method="post">
+                            <input class="btn" type="submit" value="Delete">
+                        </form>
+                    </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a class="btn" href="/products/new">Create</a>
