@@ -28,16 +28,16 @@ public class CategoryController : Controller
     [HttpGet("/category/new")]
     public IActionResult NewCategory()
     {
-        ViewBag.AllUsers = _context.Users;
         return View("~/Views/CRUD/NewCategory.cshtml");
     }
 
     [HttpPost("/category/create")]
     public IActionResult CreateCategory(Category newCategory)
     {    
+        newCategory.UserId = (int) HttpContext.Session.GetInt32("UserId");
         if(!ModelState.IsValid)
         {
-            ViewBag.AllUsers = _context.Users;
+
             return View("~/Views/CRUD/NewCategory.cshtml", newCategory);
         }
         // We can take the Category object created from a form submission
@@ -106,7 +106,7 @@ public class CategoryController : Controller
     public IActionResult EditCategory(int CategoryId)
     {
         Category? CategoryToEdit = _context.Categories.FirstOrDefault(i => i.CategoryId == CategoryId);
-        ViewBag.AllUsers = _context.Users;
+        ViewBag.AllUsers = _context.Users.ToList();
         return View("~/Views/CRUD/EditCategory.cshtml", CategoryToEdit);
     }
 
@@ -119,10 +119,12 @@ public class CategoryController : Controller
         // 3. Verify that the new instance passes validations
         if(!ModelState.IsValid || OldCategory == null)
         {
+            // ViewBag.AllUsers = _context.Users.ToList();
             // 3.5. If it does not pass validations, show error messages
             // Be sure to pass the form back in so you don't lose your changes
             // It should be the old version so we can keep the ID
-            return View("~/Views/CRUD/EditCategory.cshtml", OldCategory);
+            // return View("~/Views/CRUD/EditCategory.cshtml", OldCategory);
+            return EditCategory(OldCategory.CategoryId);
         }
 
         // 4. Overwrite the old version with the new version
@@ -147,9 +149,8 @@ public class CategoryController : Controller
     [HttpPost("/category/{CategoryId}/DestroyCategory")]
     public IActionResult DestroyCategory(int CategoryId)
     {
-        System.Console.WriteLine("Hello");
         Category? CategoryToDelete = _context.Categories.SingleOrDefault(i => i.CategoryId == CategoryId);
-        if (CategoryToDelete == null)
+        if (CategoryToDelete == null || CategoryToDelete.UserId != HttpContext.Session.GetInt32("UserId"))
         {
             return RedirectToAction("~/Views/CRUD/ShowCategory.cshtml");
         }

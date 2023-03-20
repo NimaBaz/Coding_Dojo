@@ -28,16 +28,15 @@ public class ItemController : Controller
     [HttpGet("/products/new")]
     public IActionResult NewItem()
     {
-        ViewBag.AllUsers = _context.Users;
         return View("~/Views/CRUD/NewItem.cshtml");
     }
 
     [HttpPost("/products/create")]
     public IActionResult CreateItem(Item newItem)
-    {    
+    {
+        newItem.UserId = (int) HttpContext.Session.GetInt32("UserId");
         if(!ModelState.IsValid)
         {
-            ViewBag.AllUsers = _context.Users;
             return View("~/Views/CRUD/NewItem.cshtml", newItem);
         }
         // We can take the Item object created from a form submission
@@ -106,7 +105,7 @@ public class ItemController : Controller
     public IActionResult UpdateItem(int ItemId)
     {
         Item? ItemToEdit = _context.Items.FirstOrDefault(i => i.ItemId == ItemId);
-        ViewBag.AllUsers = _context.Users;
+        ViewBag.AllUsers = _context.Users.ToList();
         return View("~/Views/CRUD/UpdateItem.cshtml", ItemToEdit);
     }
 
@@ -119,10 +118,12 @@ public class ItemController : Controller
         // 3. Verify that the new instance passes validations
         if(!ModelState.IsValid || OldItem == null)
         {
+            // ViewBag.AllUsers = _context.Users.ToList();
             // 3.5. If it does not pass validations, show error messages
             // Be sure to pass the form back in so you don't lose your changes
             // It should be the old version so we can keep the ID
-            return View("~/Views/CRUD/UpdateItem.cshtml", OldItem);
+            // return View("~/Views/CRUD/UpdateItem.cshtml", OldItem);
+            return UpdateItem(OldItem.ItemId);
         }
 
         // 4. Overwrite the old version with the new version
@@ -151,7 +152,7 @@ public class ItemController : Controller
     public IActionResult DestroyItem(int ItemId)
     {
         Item? ItemToDelete = _context.Items.SingleOrDefault(i => i.ItemId == ItemId);
-        if (ItemToDelete == null)
+        if (ItemToDelete == null || ItemToDelete.UserId != HttpContext.Session.GetInt32("UserId"))
         {
             return RedirectToAction("~/Views/CRUD/ShowItem.cshtml");
         }
