@@ -59,7 +59,7 @@ public class ItemController : Controller
             return View("~/Views/CRUD/ShowItem.cshtml", newCategory);
         }
 
-        List<ProductCategory> list = _context.ProductCategories.Where(p => p.ItemId == newCategory.ItemId).Where(c => c.CategoryId == newCategory.CategoryId).ToList();
+        List<ProductCategory> list = _context.ProductCategories.Where(p => p.ItemId == newCategory.ItemId && p.CategoryId == newCategory.CategoryId).ToList();
 
         if (list.Count > 0) {
             return RedirectToAction("ShowAllProducts", "Home");
