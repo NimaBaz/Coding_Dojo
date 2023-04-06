@@ -10,5 +10,7 @@
 # appsettings.Development.json
 # appsettings.json
 # Dojo_Survey.csproj
-
+# project.razor.json
+*.json
+!/*.json
 
