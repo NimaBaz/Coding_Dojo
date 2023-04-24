@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Show All Page";
+}
+
+@model MyViewModel
+
+<h2>Activities</h2>
+
+<p>Welcome @Context.Session.GetString("FirstName")!</p>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Activity</th>
+                <th>Date and Time</th>
+                <th>Duration</th>
+                <th>Event Coordinator</th>
+                <th>Number of Participants</th>
+                <th></th>
+                <th>Actions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Activity item in Model.AllActivities)
+            {
+                <tr>
+                    <td><a href="/activities/@item.ActivityId">@item.Title</a></td>
+                    <td>@item.Time</td>
+                    <td>@item.Duration @item.DurationUnit</td>
+                    <td>@item.User.FirstName</td>
+
+
+
+                    @{
+                        List<int> ParticipantIds = new List<int>();
+                        @foreach (var id in item.AllUsers)
+                        {
+                            ParticipantIds.Add(item.User.UserId);
+                        }
+                        if (item.User.UserId == Context.Session.GetInt32("UserId"))
+                        {
+                            if (item.AllUsers.Count == 0)
+                            {
+                                <td>No one has joined this event</td>
+                            }
+                            else
+                            {
+                                <td>
+                                    Joined by @item.AllUsers[item.AllUsers.Count - 1].User.FirstName and @(item.AllUsers.Count - 1)
+                                </td>
+                            }
+                        }
+                        else if (item.AllUsers.Count == 0)
+                        {
+                            <td>Be the first to join</td>
+                        }
+                        else if (ParticipantIds.Contains(Context.Session.GetInt32("UserId").GetValueOrDefault()))
+                        {
+                            <td>Joined by you</td>
+                        }
+                    }
+
+
+
+                    @if (item.User.UserId == @Context.Session.GetInt32("UserId"))
+                    {
+                        <td>
+                            <a href="/activities/@item.ActivityId/edit" class="btn">Edit</a>
+                        </td>
+                        <td>
+                            <form asp-action="DestroyActivity" asp-controller="Activity" asp-route-ActivityId="@item.ActivityId" method="post">
+                                <input class="btn" type="submit" value="Delete">
+                            </form>
+                        </td>
+                    }
+                    else
+                    {
+                        if (item.User.UserId == @Context.Session.GetInt32("UserId"))
+                        {
+                        <td>
+                            <a class="btn" href="/RemoveUser/@item.ActivityId">Leave</a>
+                        </td>
+                        }
+                        else
+                        {
+                            <td>
+                                <a class="btn" href="/activities/AddUser/@item.ActivityId">Join</a>
+                            </td>
+                            <td>
+                                <a class="btn" href="/RemoveUser/@item.ActivityId">Leave</a>
+                            </td>
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a class="btn" href="/activities/new">Create</a>

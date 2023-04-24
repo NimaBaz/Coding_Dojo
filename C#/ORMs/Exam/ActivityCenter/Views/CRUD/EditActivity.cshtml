@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Update Page";
+}
+
+@model Activity
+
+<h2>Update an Activity</h2>
+<form asp-action="UpdateActivity" asp-controller="Activity" asp-route-ActivityId="@Model.ActivityId" method="post" class="col-8">
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Time"></label>
+        <input asp-for="Time" class="form-control">
+        <span asp-validation-for="Time" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Date"></label>
+        <input asp-for="Date" class="form-control">
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Duration"></label>
+        <input asp-for="Duration" class="form-control">
+        <select asp-for="DurationUnit">
+            <option value="Days">Days</option>
+            <option value="Hours">Hours</option>
+            <option value="Minutes">Minutes</option>
+        </select>
+        <span asp-validation-for="Duration" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input class="btn" type="submit" value="Update">
+    </div>
+    <a class="btn" href="/activities/@Model.ActivityId">Back</a>
+</form>

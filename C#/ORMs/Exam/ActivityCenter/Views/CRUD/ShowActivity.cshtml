@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Show Page";
+}
+
+@model MyViewModel
+
+<div class="container">
+    <a class="btn" href="/activities/AddUser/@Model.Activity.ActivityId">Join</a>
+</div>
+
+
+<h1>@Model.Activity.Title</h1>
+<p>Event Coordinator: @Model.Activity.User.FirstName @Model.Activity.User.LastName</p>
+<br>
+<p>Description: @Model.Activity.Description</p>
+<br>
+<p>Participants: 
+    @foreach (var u in Model.Activity.AllUsers)
+    {
+        <p>@u.User.FirstName @u.User.LastName</p>
+
+        @if (u.User.UserId == @Context.Session.GetInt32("UserId")) 
+        {
+            <a class="btn" href="/RemoveUser/@u.ActivityId">Leave</a>
+        }
+    }
+</p>
+
+<a class="btn" href="/activities/show">Home</a>
+
+

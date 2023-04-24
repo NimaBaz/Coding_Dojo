@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Update Page";
+}
+
+@model Post
+
+<h2>Update a Post</h2>
+<form asp-action="UpdatePost" asp-controller="Post" asp-route-PostId="@Model.PostId" method="post" class="col-8">
+    <div class="mb-3">
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control">
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Medium"></label>
+        <input asp-for="Medium" class="form-control">
+        <span asp-validation-for="Medium" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ForSale"></label>
+        <input asp-for= "ForSale" type="checkbox" value="true">
+        <input asp-for= "ForSale" type="hidden" value="false">
+        <span asp-validation-for="ForSale" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input class="btn" type="submit" value="Update">
+    </div>
+    <a class="btn" href="/posts/@Model.PostId">Back</a>
+</form>

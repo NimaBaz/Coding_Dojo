@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Show Page";
+}
+
+@model UserActivity
+
+<form asp-action="AddUser" asp-controller="Activity" method="post" class="col-8">
+    <input asp-for="ActivityId" type="hidden" value="@ViewBag.ActivityId">
+    <div class="mb-3">
+        <input class="btn" type="submit" value="Join">
+    </div>
+</form>

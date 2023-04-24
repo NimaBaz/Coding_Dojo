@@ -1,0 +1,103 @@
+@{
+    ViewData["Title"] = "Show All Page";
+}
+
+@model MyViewModel
+
+<h2>Posts</h2>
+
+@* <p>Welcome @Context.Session.GetString("FirstName")!</p> *@
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Post</th>
+                <th>Medium</th>
+                <th>For Sale</th>
+                <th>Number of Likes</th>
+                <th>Actions</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Post item in Model.AllPosts)
+            {
+                <tr>
+                    <td>@item.Image</td>
+                    <td><a href="/posts/@item.PostId">@item.Title</a></td>
+                    <td>Created By: @item.User.FirstName</td>
+                    <td>@item.Medium</td>
+                    <td>@item.ForSale</td>
+
+
+
+
+                    @{
+                        List<int> UserLikesIds = new List<int>();
+                        @foreach (var id in item.AllUsers)
+                        {
+                            UserLikesIds.Add(item.User.UserId);
+                        }
+                        if (item.User.UserId == Context.Session.GetInt32("UserId"))
+                        {
+                            if (item.AllUsers.Count == 0)
+                            {
+                                <td>No one has liked this post</td>
+                            }
+                            else
+                            {
+                                <td>
+                                    Liked by @item.AllUsers[item.AllUsers.Count - 1].User.FirstName and @(item.AllUsers.Count - 1)
+                                </td>
+                            }
+                        }
+                        else if (item.AllUsers.Count == 0)
+                        {
+                            <td>Be the first to like this post</td>
+                        }
+                        else if (UserLikesIds.Contains(Context.Session.GetInt32("UserId").GetValueOrDefault()))
+                        {
+                            <td>Liked by you</td>
+                        }
+                    }
+
+
+
+                    @if (item.User.UserId == @Context.Session.GetInt32("UserId"))
+                    {
+                        <td>
+                            <a href="/posts/@item.PostId/edit" class="btn">Edit</a>
+                        </td>
+                        <td>
+                            <a class="btn" href="/Post/DestroyPost/@item.PostId">Delete</a>
+                        </td>
+                    }
+                    else
+                    {
+                        if (item.User.UserId == @Context.Session.GetInt32("UserId"))
+                        {
+                            <td>
+                                <a class="btn" href="/RemoveLike/@item.PostId">Leave</a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                <a class="btn" href="/posts/AddLike/@item.PostId">Like</a>
+                            </td>
+                            <td>
+                                <a class="btn" href="/RemoveLike/@item.PostId">Unlike</a>
+                            </td>
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a class="btn" href="/posts/new">Create</a>

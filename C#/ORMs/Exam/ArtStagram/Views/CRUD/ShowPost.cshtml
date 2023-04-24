@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Show Page";
+}
+
+@model MyViewModel
+
+
+<h1>@Model.Post.Title</h1>
+<P>@Model.Post.Image</P>
+<br>
+<p>Created By: @Model.Post.User.FirstName</p>
+<br>
+<p>Medium: @Model.Post.Medium</p>
+<br>
+<p>For Sale: @Model.Post.ForSale</p>
+<br>
+<p>@Model.Post.AllUsers.Count likes</p>
+<br>
+
+<a class="btn" href="/posts/show">Home</a>
+|
+<a href="/posts/@Model.Post.PostId/edit" class="btn">Edit</a>
+
+<form asp-action="DestroyPost" asp-controller="Post" asp-route-PostId="@Model.Post.PostId" method="post">
+    <input class="btn" type="submit" value="Delete">
+</form>
+
+
+
