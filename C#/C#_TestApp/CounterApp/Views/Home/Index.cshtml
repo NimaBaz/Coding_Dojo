@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Calculator</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <div class="form-group">
+            <label for="num1">Value 1:</label>
+            <input type="number" name="num1" class="form-control" required>
+            <label for="num2">Value 2:</label>
+            <input type="number" name="num2" class="form-control" required>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-primary" type="submit" name="operation" value="Add">+</button>
+            <button class="btn btn-primary" type="submit" name="operation" value="Subtract">-</button>
+            <button class="btn btn-primary" type="submit" name="operation" value="Multiply">x</button>
+            <button class="btn btn-primary" type="submit" name="operation" value="Divide">/</button>
+        </div>
+    </div>
+}
+
+
+@if (ViewBag.Result != null)
+{
+    <div class="alert alert-info mt-3" role="alert">
+        @ViewBag.Result
+    </div>
+}
