@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\Wedding_Planner\\Wedding_Planner.csproj": {}
+    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Belt_Prep\\Wedding_Planner\\Wedding_Planner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\Wedding_Planner\\Wedding_Planner.csproj": {
+    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Belt_Prep\\Wedding_Planner\\Wedding_Planner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\Wedding_Planner\\Wedding_Planner.csproj",
+        "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Belt_Prep\\Wedding_Planner\\Wedding_Planner.csproj",
         "projectName": "Wedding_Planner",
-        "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\Wedding_Planner\\Wedding_Planner.csproj",
+        "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Belt_Prep\\Wedding_Planner\\Wedding_Planner.csproj",
         "packagesPath": "C:\\Users\\nimab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\Wedding_Planner\\obj\\",
+        "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Belt_Prep\\Wedding_Planner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nimab\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -39,6 +39,8 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
             },

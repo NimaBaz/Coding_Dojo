@@ -8,61 +8,61 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ArtStagram
 build_property.RootNamespace = ArtStagram
-build_property.ProjectDir = c:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Exam\ArtStagram\
+build_property.ProjectDir = C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Exam\ArtStagram\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Exam\ArtStagram
+build_property.MSBuildProjectDirectory = C:\Users\nimab\OneDrive\Desktop\Coding_Dojo\C#\ORMs\Exam\ArtStagram
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/CRUD/EditPost.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/CRUD/EditPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1JVRFxFZGl0UG9zdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/CRUD/NewPost.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/CRUD/NewPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1JVRFxOZXdQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/CRUD/ShowPost.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/CRUD/ShowPost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1JVRFxTaG93UG9zdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Home/404.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Home/404.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVw0MDQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Home/Dashboard.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Home/Index.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Shared/Error.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/User/_LoginForm.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/User/_LoginForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfTG9naW5Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/User/_RegisterForm.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/User/_RegisterForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfUmVnaXN0ZXJGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/_ViewImports.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/_ViewStart.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Shared/_Layout.cshtml]
+[C:/Users/nimab/OneDrive/Desktop/Coding_Dojo/C\#/ORMs/Exam/ArtStagram/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ep5gop8lie

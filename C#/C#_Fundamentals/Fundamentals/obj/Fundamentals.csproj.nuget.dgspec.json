@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Fundamentals\\Fundamentals.csproj": {}
+    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\C#_Fundamentals\\Fundamentals\\Fundamentals.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Fundamentals\\Fundamentals.csproj": {
+    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\C#_Fundamentals\\Fundamentals\\Fundamentals.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Fundamentals\\Fundamentals.csproj",
+        "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\C#_Fundamentals\\Fundamentals\\Fundamentals.csproj",
         "projectName": "Fundamentals",
-        "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Fundamentals\\Fundamentals.csproj",
+        "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\C#_Fundamentals\\Fundamentals\\Fundamentals.csproj",
         "packagesPath": "C:\\Users\\nimab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Fundamentals\\obj\\",
+        "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\C#_Fundamentals\\Fundamentals\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nimab\\AppData\\Roaming\\NuGet\\NuGet.Config"

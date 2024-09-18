@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Hello.NET!\\Hello.NET!.csproj": {}
+    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\firstC#\\Hello.NET!.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Hello.NET!\\Hello.NET!.csproj": {
+    "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\firstC#\\Hello.NET!.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Hello.NET!\\Hello.NET!.csproj",
+        "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\firstC#\\Hello.NET!.csproj",
         "projectName": "Hello.NET!",
-        "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Hello.NET!\\Hello.NET!.csproj",
+        "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\firstC#\\Hello.NET!.csproj",
         "packagesPath": "C:\\Users\\nimab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\Hello.NET!\\obj\\",
+        "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\firstC#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nimab\\AppData\\Roaming\\NuGet\\NuGet.Config"

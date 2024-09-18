@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6NG+MsnkLCqeRuSoYDvRqCK4vFJa8zbj0/dOxnx+4PeMmRoPgOYBrFvnuqkJwgbBUh2itYDFjvj0rAPzP6/fvg==",
+  "dgSpecHash": "ouQQQD6D/4+5NUK5hXTFCT38wCyDU8ggNHmDH/rDQTjLyFeW9UkpCQX4tVdM2TgLJngCt4CXBlIJr/tLeQWrJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\Wedding_Planner\\Wedding_Planner.csproj",
+  "projectFilePath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Belt_Prep\\Wedding_Planner\\Wedding_Planner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nimab\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nimab\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g8kmBKGwaNAs3Rgu077/erKM9dmsArhGH1PXXF2UTl96xuRoDgbcGzmHIScXqgjIkIDni+FGjQqsMfmAUwVlCg==",
+  "dgSpecHash": "QamJJpuzeycmsmKLtSFtjtAOJBgEdAyirqE7psTioS34WrdPYQryhK70E9bdthzWNV7ISO2Za2317A+FrKJWWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\LoginRegistration\\LoginRegistration.csproj",
+  "projectFilePath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\ChefsNDishes\\LoginRegistration\\LoginRegistration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nimab\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nimab\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

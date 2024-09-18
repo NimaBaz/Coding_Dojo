@@ -786,11 +786,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\LoginRegistration\\LoginRegistration.csproj",
+      "projectUniqueName": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\ChefsNDishes\\LoginRegistration\\LoginRegistration.csproj",
       "projectName": "LoginRegistration",
-      "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\LoginRegistration\\LoginRegistration.csproj",
+      "projectPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\ChefsNDishes\\LoginRegistration\\LoginRegistration.csproj",
       "packagesPath": "C:\\Users\\nimab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\LoginRegistration\\obj\\",
+      "outputPath": "C:\\Users\\nimab\\OneDrive\\Desktop\\Coding_Dojo\\C#\\ORMs\\Entity_Framework\\ChefsNDishes\\LoginRegistration\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nimab\\AppData\\Roaming\\NuGet\\NuGet.Config"
